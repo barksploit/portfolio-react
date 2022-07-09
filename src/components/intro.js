@@ -4,7 +4,7 @@ import 'react-typist/dist/Typist.css';
 
 export default function Intro() {
     return (
-        <h1><Typist>Hello, Thomas here. </Typist></h1>
+        <h1><Typist>Hello, Barksploit<Typist.Backspace count={10} delay={200} /> Thomas here. </Typist></h1>
 
     );
 }
