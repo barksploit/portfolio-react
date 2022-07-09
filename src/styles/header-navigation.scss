@@ -2,12 +2,19 @@
 
 .desktop-navigation {
 
+    padding: 25px 25px 0 0;
+
     ul {
         margin: 0;
         padding: 0;
     }
 
     li {
+        display: inline-block;
+    }
+
+    li::after {
+        content: "\00a0";
         display: inline-block;
     }
 
