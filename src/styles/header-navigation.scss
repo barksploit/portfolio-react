@@ -13,11 +13,11 @@
 
     a {
         text-decoration: none;
-
+        cursor: pointer;
         color: $textcolor;
 
-        &:visited, &:active, &:hover {
-            color: $textcolor;
+        &:selected {
+            background-color: #FFF;
         }
     }
 

@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    position: fixed;
+    width: 100%;
+
+    .brand-icon-wrapper {
+        justify-self: start;
+        flex: 1 0 50%;
+    }
+
+    .desktop-navigation {
+        justify-self: end;
+        flex: 0 0 150px;
+    }
+
+}
