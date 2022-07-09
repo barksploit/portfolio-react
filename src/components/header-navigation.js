@@ -1,4 +1,5 @@
 import '../styles/header-navigation.scss';
+import { Link } from 'react-scroll';
 
 export default function Header() {
     return (
@@ -7,7 +8,7 @@ export default function Header() {
 
             <ul>
 
-                <li><a href="#">intro.js</a></li>
+                <li><Link activeClass="active" to="intro" spy={true} smooth={true} offset={50} duration={500}>intro.js</Link></li>
                 <li><a href="#">about.js</a></li>
                 <li><a href="#">experience.js</a></li>
                 <li><a href="#">work.js</a></li>
