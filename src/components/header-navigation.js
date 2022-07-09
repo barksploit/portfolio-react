@@ -1,7 +1,10 @@
 import '../styles/header-navigation.scss';
-import { Link } from 'react-scroll';
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { useEffect } from 'react';
 
-export default function Header() {
+export default function HeaderNav() {
+
     return (
 
         <nav className="desktop-navigation">
@@ -9,10 +12,10 @@ export default function Header() {
             <ul>
 
                 <li><Link activeClass="active" to="intro" spy={true} smooth={true} offset={50} duration={500}>intro.js</Link></li>
-                <li><a href="#">about.js</a></li>
-                <li><a href="#">experience.js</a></li>
-                <li><a href="#">work.js</a></li>
-                <li><a href="#">end.js</a></li>
+                <li><Link activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500}>about.js</Link></li>
+                <li><Link activeClass="active" to="experience" spy={true} smooth={true} offset={50} duration={500}>experience.js</Link></li>
+                <li><Link activeClass="active" to="work" spy={true} smooth={true} offset={50} duration={500}>work.js</Link></li>
+                <li><Link activeClass="active" to="credits" spy={true} smooth={true} offset={50} duration={500}>end.js</Link></li>
 
 
             </ul>

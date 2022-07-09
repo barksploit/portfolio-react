@@ -4,6 +4,10 @@
 
     padding: 25px 25px 0 0;
 
+    .active {
+        background-color: #FFF;
+    }
+
     ul {
         margin: 0;
         padding: 0;
@@ -22,10 +26,6 @@
         text-decoration: none;
         cursor: pointer;
         color: $textcolor;
-
-        &:selected {
-            background-color: #FFF;
-        }
     }
 
 }
