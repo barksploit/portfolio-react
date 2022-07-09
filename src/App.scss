@@ -1,5 +1,4 @@
-$bgcolor: rgb(43, 43, 43);
-$textcolor: rgb(231, 231, 231);
+@import "./styles/variables.scss";
 
 body {
     color: $textcolor;

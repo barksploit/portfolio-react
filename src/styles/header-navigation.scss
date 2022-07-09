@@ -1,3 +1,28 @@
+@import "./variables.scss";
+
+.desktop-navigation {
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        text-decoration: none;
+
+        color: $textcolor;
+
+        &:visited, &:active, &:hover {
+            color: $textcolor;
+        }
+    }
+
+}
+
 @media (max-width: 1024px) {
     .desktop-navigation {
         display: none;
