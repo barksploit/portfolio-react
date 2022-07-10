@@ -4,8 +4,13 @@
     margin-left: 15rem;
     align-items: center;
 
-    h1 {
+    .intro-header {
         font-weight: lighter;
+        margin: 0;
+    }
+
+    .intro-subtitle {
+        margin-bottom: 0;
     }
 
     h1, h2, p {
@@ -14,6 +19,20 @@
 
     .intro-content-wrapper {
         max-width: 25%;
+    }
+
+    .intro-social-media-links {
+        margin: 3rem 0 1rem 0;
+    }
+
+    .intro-social-media-link > svg {
+        color: #FFF;
+        padding: 1rem;
+
+        &:hover {
+            background-color: #FFF;
+            color: #333;
+        }
     }
 
 }
