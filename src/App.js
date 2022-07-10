@@ -1,6 +1,7 @@
 import './App.scss';
 import Header from './components/header';
 import Intro from './components/intro';
+import About from './components/about';
 import Footer from './components/footer';
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
       <Header />
 
       <Intro />
+
+      <About />
 
       <Footer />
     </div>

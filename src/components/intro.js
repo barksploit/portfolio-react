@@ -39,7 +39,7 @@ export default function Intro() {
                 start: "top top",
                 end: "bottom top",
                 pin: true,
-                pinSpacing: false
+                pinSpacer: false
             }
         });
     }, []);
