@@ -52,7 +52,7 @@ export default function Intro() {
                     <Link href="https://twitter.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
                         <TwitterIcon />
                     </Link>
-                    <Link href="https://github.com/" className="intro-social-media-link" target="_blank" rel="noopener">
+                    <Link href="https://github.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
                         <GitHubIcon />
                     </Link>
                     <Link href="https://www.linkedin.com/in/thomas-anthony-griffin/" className="intro-social-media-link" target="_blank" rel="noopener">
