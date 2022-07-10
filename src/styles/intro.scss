@@ -1,8 +1,12 @@
+@import "./variables.scss";
+
 #intro {
     height: 100vh;
     display: flex;
-    margin-left: 15rem;
+    padding-left: 15rem;
+    background-color: $bgcolor;
     align-items: center;
+    backface-visibility: hidden;
 
     .intro-header {
         font-weight: lighter;
