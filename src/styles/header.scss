@@ -3,6 +3,7 @@ header {
     flex-flow: row nowrap;
     position: fixed;
     width: 100%;
+    z-index: 1;
 
     .brand-icon-wrapper {
         justify-self: start;

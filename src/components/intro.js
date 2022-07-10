@@ -36,7 +36,7 @@ export default function Intro() {
             scrollTrigger: {
                 markers: true,
                 trigger: "#intro",
-                scrub: true,
+                scrub: 4,
                 start: "top top",
                 end: "bottom top",
                 pin: true
