@@ -35,10 +35,11 @@ export default function Intro() {
             x: "100vw",
             scrollTrigger: {
                 trigger: "#intro",
-                scrub: 4,
+                scrub: 2,
                 start: "top top",
                 end: "bottom top",
-                pin: true
+                pin: true,
+                pinSpacing: false
             }
         });
     }, []);
