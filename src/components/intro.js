@@ -34,7 +34,6 @@ export default function Intro() {
         gsap.to(introRef.current, {
             x: "100vw",
             scrollTrigger: {
-                markers: true,
                 trigger: "#intro",
                 scrub: 4,
                 start: "top top",

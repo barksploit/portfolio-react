@@ -6,7 +6,7 @@
     padding-left: 15rem;
     background-color: $bgcolor;
     align-items: center;
-    backface-visibility: hidden;
+    overflow-x: none;
 
     .intro-header {
         font-weight: lighter;
