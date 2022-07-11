@@ -29,13 +29,34 @@
         margin: 3rem 0 1rem 0;
     }
 
-    .intro-social-media-link > svg {
+    .intro-social-media-link {
         color: #FFF;
         padding: 1rem;
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            transition: height 0.2s, color 0.2s;
+            height: 0%;
+            background-color: #FFF;
+        }
 
         &:hover {
-            background-color: #FFF;
-            color: #333;
+
+            > svg {
+                color: #333;
+                position: relative;
+            }
+
+            &::before {
+                height: 100%;
+            }
+
         }
     }
 
