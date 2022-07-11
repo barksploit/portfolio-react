@@ -40,7 +40,7 @@ export default function Intro() {
             x: "100vw",
             opacity: 0,
             scrollTrigger: {
-                trigger: ".intro-wrapper",
+                trigger: "#intro",
                 scrub: 2,
                 start: "top top",
                 end: "bottom top",
@@ -50,8 +50,8 @@ export default function Intro() {
     }, []);
 
     return (
-        <div class="intro-wrapper" ref={introRef}>
-            <section id="intro">
+        <div id="intro-wrapper">
+            <section id="intro" ref={introRef}>
                 <div class="intro-content-wrapper">
                     <h1 className="intro-header"><Typist avgTypingDelay={100}>Hello, BarkSploit<Typist.Backspace count={10} delay={200} /> Thomas here. </Typist></h1>
                     <h2 className="intro-subtitle">Full-Stack Web Developer</h2>

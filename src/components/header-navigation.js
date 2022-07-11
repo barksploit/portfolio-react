@@ -9,7 +9,7 @@ export default function HeaderNav() {
 
             <ul>
 
-                <li><Link activeClass="active" to="intro" spy={true} smooth={true} duration={500}>intro.js</Link></li>
+                <li><Link activeClass="active" to="intro-wrapper" spy={true} smooth={true} duration={500}>intro.js</Link></li>
                 <li><Link activeClass="active" to="about" spy={true} smooth={true} duration={500}>about.js</Link></li>
                 <li><Link activeClass="active" to="experience" spy={true} smooth={true} duration={500}>experience.js</Link></li>
                 <li><Link activeClass="active" to="work" spy={true} smooth={true} duration={500}>work.js</Link></li>
