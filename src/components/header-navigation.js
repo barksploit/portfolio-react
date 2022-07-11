@@ -1,7 +1,5 @@
 import '../styles/header-navigation.scss';
-import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import { useEffect } from 'react';
+import { Link } from 'react-scroll';
 
 export default function HeaderNav() {
 

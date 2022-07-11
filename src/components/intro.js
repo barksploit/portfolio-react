@@ -15,7 +15,12 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default function Intro() {
     gsap.registerPlugin(ScrollTrigger);
+
     const introRef = useRef();
+
+    const handleLearnMoreClick = () => {
+        document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+    }
 
     const theme = createTheme({
         palette: {
@@ -67,7 +72,7 @@ export default function Intro() {
                 <ThemeProvider theme={theme}>
                     <ButtonGroup variant="outlined" aria-label="outlined primary button group">
                         <Button>Contact me</Button>
-                        <Button>Learn more</Button>
+                        <Button onClick={() => { handleLearnMoreClick() }}>Learn more</Button>
                     </ButtonGroup></ThemeProvider>
             </div>
         </section >
