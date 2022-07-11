@@ -38,6 +38,7 @@ export default function Intro() {
     useEffect(() => {
         gsap.to(introRef.current, {
             x: "100vw",
+            opacity: 0,
             scrollTrigger: {
                 trigger: ".intro-wrapper",
                 scrub: 2,
