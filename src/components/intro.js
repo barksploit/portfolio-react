@@ -39,42 +39,43 @@ export default function Intro() {
         gsap.to(introRef.current, {
             x: "100vw",
             scrollTrigger: {
-                trigger: "#intro",
+                trigger: ".intro-wrapper",
                 scrub: 2,
                 start: "top top",
                 end: "bottom top",
                 pin: true,
-                pinSpacing: false,
                 snap: 30
             }
         });
     }, []);
 
     return (
-        <section id="intro" ref={introRef}>
-            <div class="intro-content-wrapper">
-                <h1 className="intro-header"><Typist avgTypingDelay={100}>Hello, BarkSploit<Typist.Backspace count={10} delay={200} /> Thomas here. </Typist></h1>
-                <h2 className="intro-subtitle">Full-Stack Web Developer</h2>
-                <div className="intro-social-media-links">
-                    <Link href="https://twitter.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
-                        <TwitterIcon />
-                    </Link>
-                    <Link href="https://github.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
-                        <GitHubIcon />
-                    </Link>
-                    <Link href="https://www.linkedin.com/in/thomas-anthony-griffin/" className="intro-social-media-link" target="_blank" rel="noopener">
-                        <LinkedInIcon />
-                    </Link>
-                    <Link href="https://www.instagram.com/barksploit/" className="intro-social-media-link" target="_blank" rel="noopener">
-                        <InstagramIcon />
-                    </Link>
-                </div >
-                <ThemeProvider theme={theme}>
-                    <ButtonGroup variant="outlined" aria-label="outlined primary button group">
-                        <Button>Contact me</Button>
-                        <Button onClick={() => { handleLearnMoreClick() }}>Learn more</Button>
-                    </ButtonGroup></ThemeProvider>
-            </div>
-        </section >
+        <div class="intro-wrapper" ref={introRef}>
+            <section id="intro">
+                <div class="intro-content-wrapper">
+                    <h1 className="intro-header"><Typist avgTypingDelay={100}>Hello, BarkSploit<Typist.Backspace count={10} delay={200} /> Thomas here. </Typist></h1>
+                    <h2 className="intro-subtitle">Full-Stack Web Developer</h2>
+                    <div className="intro-social-media-links">
+                        <Link href="https://twitter.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
+                            <TwitterIcon />
+                        </Link>
+                        <Link href="https://github.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
+                            <GitHubIcon />
+                        </Link>
+                        <Link href="https://www.linkedin.com/in/thomas-anthony-griffin/" className="intro-social-media-link" target="_blank" rel="noopener">
+                            <LinkedInIcon />
+                        </Link>
+                        <Link href="https://www.instagram.com/barksploit/" className="intro-social-media-link" target="_blank" rel="noopener">
+                            <InstagramIcon />
+                        </Link>
+                    </div >
+                    <ThemeProvider theme={theme}>
+                        <ButtonGroup variant="outlined" aria-label="outlined primary button group">
+                            <Button>Contact me</Button>
+                            <Button onClick={() => { handleLearnMoreClick() }}>Learn more</Button>
+                        </ButtonGroup></ThemeProvider>
+                </div>
+            </section>
+        </div>
     );
 }
