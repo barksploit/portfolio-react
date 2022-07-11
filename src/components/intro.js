@@ -45,7 +45,6 @@ export default function Intro() {
                 start: "top top",
                 end: "bottom top",
                 pin: true,
-                snap: 30
             }
         });
     }, []);
