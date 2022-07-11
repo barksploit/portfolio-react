@@ -69,7 +69,7 @@ export default function Intro() {
                         <Button>Contact me</Button>
                         <Button>Learn more</Button>
                     </ButtonGroup></ThemeProvider>
-            </div >
+            </div>
         </section >
     );
 }

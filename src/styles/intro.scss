@@ -2,7 +2,8 @@
 
 #intro {
     height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding-left: 15rem;
     background-color: $bgcolor;
     align-items: center;
@@ -21,7 +22,7 @@
     }
 
     .intro-content-wrapper {
-        max-width: 25%;
+        grid-column: 1 / 1;
     }
 
     .intro-social-media-links {
@@ -38,4 +39,12 @@
         }
     }
 
+}
+
+@media (max-width: 1024px) {
+    #intro {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        text-align: center;
+    }
 }
