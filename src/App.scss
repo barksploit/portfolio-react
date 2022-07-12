@@ -1,9 +1,13 @@
 @import "./styles/variables.scss";
 
+html body {
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     color: $textcolor;
     background-color: $bgcolor;
-    overflow-x: hidden;
 }
 
 h1 {
