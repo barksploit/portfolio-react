@@ -1,6 +1,7 @@
 @import "./styles/variables.scss";
 
-html body {
+html,
+body {
     overflow-x: hidden;
     position: relative;
 }
