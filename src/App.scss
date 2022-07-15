@@ -14,3 +14,21 @@ body {
 h1 {
     font-size: 4rem;
 }
+
+.fade-in-section {
+    opacity: 0;
+    -webkit-transform: translateY(10vh);
+    transform: translateY(10vh);
+    visibility: hidden;
+    transition: opacity .6s ease-out,-webkit-transform 1s ease-out;
+    transition: opacity .6s ease-out,transform 1s ease-out;
+    transition: opacity .6s ease-out,transform 1s ease-out,-webkit-transform 1s ease-out;
+}
+
+.is-visible {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible;
+}
+

@@ -7,7 +7,7 @@ import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import FadeIn from 'react-fade-in';
+import FadeInSection from './fadeinsection';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { gsap } from "gsap";
@@ -54,8 +54,8 @@ export default function Intro() {
         <div id="intro-wrapper">
             <section id="intro" ref={introRef}>
                 <div class="intro-content-wrapper">
-                    <FadeIn delay={100}>
-                        <h1 className="intro-header"><Typist avgTypingDelay={80}>Hello, grfn.sh<Typist.Backspace count={7} delay={200} /> Thomas here. </Typist></h1>
+                    <h1 className="intro-header"><Typist avgTypingDelay={80}>Hello, grfn.sh<Typist.Backspace count={7} delay={200} /> Thomas here. </Typist></h1>
+                    <FadeInSection>
                         <h2 className="intro-subtitle">Full-Stack Web Developer</h2>
                         <div className="intro-social-media-links">
                             <Link href="https://twitter.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
@@ -76,7 +76,7 @@ export default function Intro() {
                                 <Button>Contact me</Button>
                                 <Button onClick={() => { handleLearnMoreClick() }}>Learn more</Button>
                             </ButtonGroup></ThemeProvider>
-                    </FadeIn>
+                    </FadeInSection>
                 </div>
             </section>
         </div>
