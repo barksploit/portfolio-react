@@ -73,7 +73,7 @@ export default function About() {
 
                     <p>Here are some things I've worked with:</p>
                     <ThemeProvider theme={theme}>
-                        <Stack direction="row" spacing={1} style={{ flexWrap: "wrap", marginTop: "50px", justifyContent: "space-between" }}>
+                        <Stack direction="row" spacing={1} style={{ flexWrap: "wrap", marginTop: "50px", justifyContent: "space-around" }}>
 
                             {technologies.map(function (tech_item, i) {
                                 return (
