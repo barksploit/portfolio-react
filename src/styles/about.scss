@@ -1,3 +1,18 @@
+@import "./variables.scss";
+
 #about {
     height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 15rem;
+    align-items: center;
+
+    h1 {
+        font-weight: lighter;
+    }
+
+    .about-content-wrapper {
+        grid-column: 1 / 1;
+    }
+
 }
