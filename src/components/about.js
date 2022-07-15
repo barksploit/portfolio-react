@@ -65,7 +65,7 @@ export default function About() {
         <section id="about">
             <div class="about-content-wrapper">
                 <FadeInSection>
-                    <h1>&lt;about me&gt;</h1>
+                    <h1>&lt;about&gt;</h1>
 
 
 

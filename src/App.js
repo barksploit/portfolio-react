@@ -12,8 +12,6 @@ function App() {
       <Intro />
 
       <About />
-
-      <Footer />
     </div>
   );
 }
