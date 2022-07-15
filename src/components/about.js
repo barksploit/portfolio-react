@@ -1,6 +1,7 @@
 import '../styles/about.scss';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import Avatar from '@mui/material/Avatar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 export default function About() {
     const theme = createTheme({
@@ -24,17 +25,18 @@ export default function About() {
 
                 <p>Here are some things I've worked with:</p>
                 <ThemeProvider theme={theme}>
-                    <Stack direction="row" spacing={1}>
-                        <Chip label="Javascript ES6+" color="primary" variant="outlined" />
-                        <Chip label="React.js" color="primary" variant="outlined" />
-                        <Chip label="PHP 8+" color="primary" variant="outlined" />
-                        <Chip label="Laravel" color="primary" variant="outlined" />
-                        <Chip label="HTML & CSS" color="primary" variant="outlined" />
-                        <Chip label="SCSS/SASS" color="primary" variant="outlined" />
-                        <Chip label="Amazon Web Services" color="primary" variant="outlined" />
+                    <Stack direction="row" spacing={1} style={{ flexWrap: "wrap", marginTop: "50px" }}>
+                        <Chip className="about-worked-with-chip" avatar={<Avatar alt="Natacha" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" />} label="Javascript ES6+" color="primary" variant="outlined" />
+                        <Chip className="about-worked-with-chip" avatar={<Avatar alt="Natacha" src="https://reactjs.org/logo-og.png" />} label="React.js" color="primary" variant="outlined" />
+                        <Chip className="about-worked-with-chip" avatar={<Avatar alt="Natacha" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" />} label="PHP 8+" color="primary" variant="outlined" />
+                        <Chip className="about-worked-with-chip" avatar={<Avatar sx={{ bgcolor: "#FFF !important" }} alt="Natacha" src="https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg" />} label="MySQL" color="primary" variant="outlined" />
+                        <Chip className="about-worked-with-chip" avatar={<Avatar alt="Natacha" sx={{ bgcolor: "#FFF !important" }} src="https://seeklogo.com/images/L/laravel-logo-9B01588B1F-seeklogo.com.png" />} label="Laravel" color="primary" variant="outlined" />
+                        <Chip className="about-worked-with-chip" avatar={<Avatar alt="Natacha" sx={{ bgcolor: "#FFF !important" }} src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" />} label="HTML & CSS" color="primary" variant="outlined" />
+                        <Chip className="about-worked-with-chip" avatar={<Avatar sx={{ bgcolor: "#FFF !important" }} alt="Natacha" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png" />} label="SCSS/SASS" color="primary" variant="outlined" />
+                        <Chip className="about-worked-with-chip" avatar={<Avatar alt="Natacha" src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" />} label="Amazon Web Services" color="primary" variant="outlined" />
                     </Stack>
                 </ThemeProvider>
             </div>
-        </section>
+        </section >
     );
 }
