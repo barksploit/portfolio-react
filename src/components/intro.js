@@ -54,7 +54,7 @@ export default function Intro() {
         <div id="intro-wrapper">
             <section id="intro" ref={introRef}>
                 <div className="intro-content-wrapper">
-                    <h1 className="intro-header"><Typist avgTypingDelay={120}>Hello, grfn.sh<Typist.Backspace count={7} delay={200} /> Thomas here. </Typist></h1>
+                    <h1 className="intro-header"><Typist avgTypingDelay={120}>grfn.sh<Typist.Backspace count={7} delay={200} />Hello, Thomas here. </Typist></h1>
                     <FadeInSection>
                         <h2 className="intro-subtitle">Full-Stack Web Developer</h2>
                         <div className="intro-social-media-links">
