@@ -40,9 +40,8 @@ export default function Intro() {
 
     const [works, setWorks] = useState([]);
 
-    let page = 1;
-
     useEffect(() => {
+        let page = 1;
         const fetchWorks = async () => {
             axios.get("https://grfn.sh/work/?offset=" + page).then((response) => {
                 setWorks(previousWorks => [...previousWorks, response.data]);
