@@ -2,7 +2,7 @@ import './App.scss';
 import Header from './components/header';
 import Intro from './components/intro';
 import About from './components/about';
-import Footer from './components/footer';
+import Work from './components/work';
 
 function App() {
   return (
@@ -12,6 +12,8 @@ function App() {
       <Intro />
 
       <About />
+
+      <Work />
     </div>
   );
 }

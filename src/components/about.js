@@ -4,19 +4,21 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-export default function About() {
-    const theme = createTheme({
-        palette: {
-            primary: {
-                // Purple and green play nicely together.
-                main: '#FFF',
-            },
-            secondary: {
-                // This is green.A700 as hex.
-                main: '#11cb5f',
-            },
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            // Purple and green play nicely together.
+            main: '#FFF',
         },
-    });
+        secondary: {
+            // This is green.A700 as hex.
+            main: '#11cb5f',
+        },
+    },
+});
+
+export default function About() {
 
     const technologies = [
         {

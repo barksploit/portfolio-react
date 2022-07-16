@@ -14,27 +14,27 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
+const theme = createTheme({
+    palette: {
+        primary: {
+            // Purple and green play nicely together.
+            main: '#FFF',
+        },
+        secondary: {
+            // This is green.A700 as hex.
+            main: '#11cb5f',
+        },
+    },
+});
+
+const handleLearnMoreClick = () => {
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+}
+
 export default function Intro() {
     gsap.registerPlugin(ScrollTrigger);
 
     const introRef = useRef();
-
-    const handleLearnMoreClick = () => {
-        document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-    }
-
-    const theme = createTheme({
-        palette: {
-            primary: {
-                // Purple and green play nicely together.
-                main: '#FFF',
-            },
-            secondary: {
-                // This is green.A700 as hex.
-                main: '#11cb5f',
-            },
-        },
-    });
 
     useEffect(() => {
         gsap.to(introRef.current, {
