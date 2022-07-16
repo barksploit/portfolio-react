@@ -18,14 +18,14 @@
     
         .github-repository {
             padding: 3em;
-            border: 1px solid #202020;
+            background-color: rgb(223, 223, 223);
             border-radius: 10px;
             height: 100%;
             box-sizing: border-box;
             word-break: break-word;
             
             .work-title, .work-description {
-                color: #FFF;
+                color: rgb(0, 0, 0);
                 text-decoration: none;
             }
 
@@ -41,7 +41,7 @@
             .work-topic {
                 font-weight: bold;
                 display: inline-block;
-                color: #FFF;
+                color: rgb(0, 0, 0);
                 &::after {
                     content: "\00a0";
                 }
