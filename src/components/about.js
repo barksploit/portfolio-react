@@ -54,7 +54,7 @@ export default function About() {
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png",
         },
         {
-            label: "AWS",
+            label: "Amazon Web Services",
             avatarsrc: "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
         },
     ];
