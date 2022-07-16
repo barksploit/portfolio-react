@@ -1,8 +1,8 @@
 #work {
     min-height: 100vh;
-    padding-left: 15rem;
-    margin-bottom: 250px;
+    margin: 500px 0 500px 15rem;
     align-items: center;
+    display: grid;
 
     h1 {
         font-weight: lighter;
@@ -13,7 +13,7 @@
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         grid-auto-rows: 1fr;
-        gap: 1em;
+        gap: 3em;
     
     
         .github-repository {
@@ -54,7 +54,7 @@
 
 @media (max-width: 1600px) {
     #work {
-        padding: 0 30px;
+        margin: 500px 30px;
     }
     
     #work .works-container {

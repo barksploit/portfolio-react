@@ -1,10 +1,10 @@
 @import "./variables.scss";
 
 #about {
-    min-height: 100vh;
     display: grid;
+    min-height: 100vh;
     grid-template-columns: repeat(2, 1fr);
-    padding-left: 15rem;
+    margin: 500px 0 500px 15rem;
     align-items: center;
 
     h1 {
@@ -25,6 +25,6 @@
 @media (max-width: 1024px) {
     #about {
         grid-template-columns: 1fr;
-        padding: 0 30px;
+        margin: 500px 30px;
     }
 }
