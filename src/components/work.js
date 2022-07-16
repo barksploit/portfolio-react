@@ -15,7 +15,7 @@ const outputWorks = works => {
                     <p className='work-description'>{work.description}</p>
                     {work.topics.map((topic) => {
                         return (
-                            <a href={`https://github.com/topics/${topic}`}> <span key={topic} class="work-topic">{topic}</span></a>
+                            <a href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"> <span key={topic} class="work-topic">{topic}</span></a>
                         )
                     })}
                 </FadeInSection>
