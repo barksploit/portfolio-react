@@ -65,18 +65,16 @@ export default function About() {
                 <FadeInSection>
                     <h1>&lt;about&gt;</h1>
 
-
-
                     <p style={{ lineHeight: "2em" }}>I am a Junior Web and Software Developer based in the South West UK. I specialise in Full-Stack Web Development. I graduated with a First-Class Honours BSc degree in Applied Computing from UWE Bristol in 2022. I plan on going back to University to hopefully achieve a Masters degree in Cyber Security.</p>
 
                     <p>Here are some things I've worked with:</p>
                     <ThemeProvider theme={theme}>
-                        <Stack direction="row" spacing={1} style={{ flexWrap: "wrap", marginTop: "50px", justifyContent: "space-around" }}>
+                        <Stack direction="row" spacing={1} style={{ flexWrap: "wrap", marginTop: "50px", justifyContent: "flex-start" }}>
 
                             {technologies.map((tech_item, i) => {
                                 return (
-                                    <FadeInSection key={i} delay={`${i + 1}00ms`}>
-                                        <Chip className="about-worked-with-chip" avatar={<Avatar sx={{ bgcolor: "#FFF !important", margin: "0" }} alt="Natacha" src={tech_item.avatarsrc} />} label={tech_item.label} color="primary" variant="outlined" />
+                                    <FadeInSection className="about-worked-with-chip" key={i} delay={`${i + 1}00ms`}>
+                                        <Chip avatar={<Avatar sx={{ bgcolor: "#FFF !important", margin: "0" }} alt="Natacha" src={tech_item.avatarsrc} />} label={tech_item.label} color="primary" variant="outlined" />
                                     </FadeInSection>
                                 );
                             })}
