@@ -23,12 +23,14 @@ const outputWorks = works => {
     for (const iterator in works) {
         const work = works[iterator];
         arr.push(
-            <div className="github-repository">
-                <FadeInSection key={works[iterator]} delay={`${iterator}00ms`}>
-                    <a href={work.html_url} target="_blank" rel="noopener"><h2>{work.full_name}</h2>
-                        <p>{work.description}</p></a>
-                </FadeInSection>
-            </div>
+            <a href={work.html_url} target="_blank" rel="noopener">
+                <div className="github-repository">
+                    <FadeInSection key={works[iterator]} delay={`${iterator}00ms`}>
+                        <h2 className='work-title'>{work.full_name}</h2>
+                        <p className='work-description'>{work.description}</p>
+                    </FadeInSection>
+                </div>
+            </a>
         )
     }
     return arr;
@@ -56,8 +58,9 @@ export default function Intro() {
             <FadeInSection>
 
                 <h1>&lt;work&gt;</h1>
-                {outputWorks(works[0])}
-
+                <div className="works-container">
+                    {outputWorks(works[0])}
+                </div>
 
             </FadeInSection>
 

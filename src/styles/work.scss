@@ -1,13 +1,41 @@
 #work {
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     padding-left: 15rem;
     align-items: center;
 
     h1 {
         font-weight: lighter;
         opacity: 0.2;
+    }
+
+    .works-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 1fr;
+        gap: 1em;
+    
+    
+        .github-repository {
+            padding: 3em;
+            border: 1px solid #202020;
+            border-radius: 10px;
+            height: 100%;
+            box-sizing: border-box;
+            
+            .work-title, .work-description {
+                color: #FFF;
+                text-decoration: none;
+            }
+
+            .work-title {
+                font-size: 2em;
+            }
+
+            .work-description {
+                font-size: 1em;
+            }
+        
+        }
     }
 
 }
