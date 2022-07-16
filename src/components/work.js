@@ -9,8 +9,9 @@ const outputWorks = works => {
     for (const iterator in works) {
         const work = works[iterator];
         arr.push(
-            <div className="github-repository">
-                <FadeInSection key={works[iterator]} delay={`${iterator}00ms`}>
+            <FadeInSection key={works[iterator]} delay={`${iterator}00ms`}>
+                <div className="github-repository">
+
                     <h2 className='work-title'>{work.full_name}</h2>
                     <p className='work-description'>{work.description}</p>
                     {work.topics.map((topic) => {
@@ -18,8 +19,9 @@ const outputWorks = works => {
                             <a href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"> <span key={topic} class="work-topic">{topic}</span></a>
                         )
                     })}
-                </FadeInSection>
-            </div >
+
+                </div>
+            </FadeInSection>
         )
     }
     return arr;
