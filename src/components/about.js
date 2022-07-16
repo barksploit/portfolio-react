@@ -65,7 +65,7 @@ export default function About() {
                 <FadeInSection>
                     <h1>&lt;about&gt;</h1>
 
-                    <p style={{ lineHeight: "2em" }}>I am a Junior Web and Software Developer based in the South West UK. I specialise in Full-Stack Web Development. I graduated with a First-Class Honours BSc degree in Applied Computing from UWE Bristol in 2022. I plan on going back to University to hopefully achieve a Masters degree in Cyber Security.</p>
+                    <p style={{ lineHeight: "2em" }}>I am a Junior Web and Software Developer based in the South West UK. I specialise in Full-Stack Web Development. I graduated with a First-Class Honours BSc degree in Applied Computing from UWE Bristol in 2022. I plan on going back to University and go on to achieve a Masters degree in Cyber Security.</p>
 
                     <p>Here are some things I've worked with:</p>
                     <ThemeProvider theme={theme}>
