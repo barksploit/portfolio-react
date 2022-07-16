@@ -1,36 +1,25 @@
 import '../styles/work.scss';
 import 'react-typist/dist/Typist.css';
-import { createTheme } from '@mui/material/styles';
 import axios from 'axios';
 import FadeInSection from './fadeinsection';
 import { useEffect, useState } from 'react';
-
-const theme = createTheme({
-    palette: {
-        primary: {
-            // Purple and green play nicely together.
-            main: '#FFF',
-        },
-        secondary: {
-            // This is green.A700 as hex.
-            main: '#11cb5f',
-        },
-    },
-});
 
 const outputWorks = works => {
     let arr = [];
     for (const iterator in works) {
         const work = works[iterator];
         arr.push(
-            <a href={work.html_url} target="_blank" rel="noopener">
-                <div className="github-repository">
-                    <FadeInSection key={works[iterator]} delay={`${iterator}00ms`}>
-                        <h2 className='work-title'>{work.full_name}</h2>
-                        <p className='work-description'>{work.description}</p>
-                    </FadeInSection>
-                </div>
-            </a>
+            <div className="github-repository">
+                <FadeInSection key={works[iterator]} delay={`${iterator}00ms`}>
+                    <h2 className='work-title'>{work.full_name}</h2>
+                    <p className='work-description'>{work.description}</p>
+                    {work.topics.map((topic) => {
+                        return (
+                            <a href={`https://github.com/topics/${topic}`}> <span key={topic} class="work-topic">{topic}</span></a>
+                        )
+                    })}
+                </FadeInSection>
+            </div >
         )
     }
     return arr;

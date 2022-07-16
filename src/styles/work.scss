@@ -35,6 +35,15 @@
             .work-description {
                 font-size: 1em;
             }
+
+            .work-topic {
+                font-weight: bold;
+                display: inline-block;
+                color: #FFF;
+                &::after {
+                    content: "\00a0";
+                }
+            }
         
         }
     }
