@@ -1,7 +1,7 @@
 import '../styles/work.scss';
 import 'react-typist/dist/Typist.css';
 import { createTheme } from '@mui/material/styles';
-import Axios from 'axios';
+import axios from 'axios';
 import FadeInSection from './fadeinsection';
 import { useEffect, useState } from 'react';
 
@@ -18,16 +18,36 @@ const theme = createTheme({
     },
 });
 
+const outputWorks = works => {
+    let arr = [];
+    for (const iterator in works) {
+        const work = works[iterator];
+        arr.push(
+            <div className="github-repository">
+                <FadeInSection key={works[iterator]} delay={`${iterator}00ms`}>
+                    <h2>{work.full_name}</h2>
+                    <p>{work.description}</p>
+                </FadeInSection>
+            </div>
+        )
+    }
+    return arr;
+}
+
 export default function Intro() {
 
-    const [works, setWorks] = useState({});
+    const [works, setWorks] = useState([]);
+
+    let page = 1;
 
     useEffect(() => {
+        const fetchWorks = async () => {
+            axios.get("https://grfn.sh/work/?offset=" + page).then((response) => {
+                setWorks(previousWorks => [...previousWorks, response.data]);
+            });
+        }
 
-        Axios.get("grfn.sh/work/?offset=" + works.length).then((response) => {
-            setWorks(previousWorks => [...previousWorks, JSON.parse(response)]);
-        });
-
+        fetchWorks();
     }, []);
 
     return (
@@ -36,6 +56,8 @@ export default function Intro() {
             <FadeInSection>
 
                 <h1>&lt;work&gt;</h1>
+                {outputWorks(works[0])}
+
 
             </FadeInSection>
 

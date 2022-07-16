@@ -11,9 +11,10 @@ curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sor
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
+curl_setopt($ch, CURLOPT_USERPWD, "barksploit" . ":" . "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");
+
 $headers = [
     'Accept: application/vnd.github+json',
-    'Authorization: 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',
     'User-Agent: barksploit'
 ];
 
@@ -21,6 +22,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $output = curl_exec($ch);
 
-var_dump($output);
+print_r($output);
 
 curl_close($ch);

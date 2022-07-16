@@ -61,7 +61,7 @@ export default function About() {
 
     return (
         <section id="about">
-            <div class="about-content-wrapper">
+            <div className="about-content-wrapper">
                 <FadeInSection>
                     <h1>&lt;about&gt;</h1>
 
@@ -73,9 +73,9 @@ export default function About() {
                     <ThemeProvider theme={theme}>
                         <Stack direction="row" spacing={1} style={{ flexWrap: "wrap", marginTop: "50px", justifyContent: "space-around" }}>
 
-                            {technologies.map(function (tech_item, i) {
+                            {technologies.map((tech_item, i) => {
                                 return (
-                                    <FadeInSection delay={`${i + 1}00ms`}>
+                                    <FadeInSection key={i} delay={`${i + 1}00ms`}>
                                         <Chip className="about-worked-with-chip" avatar={<Avatar sx={{ bgcolor: "#FFF !important", margin: "0" }} alt="Natacha" src={tech_item.avatarsrc} />} label={tech_item.label} color="primary" variant="outlined" />
                                     </FadeInSection>
                                 );

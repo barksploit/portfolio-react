@@ -53,7 +53,7 @@ export default function Intro() {
     return (
         <div id="intro-wrapper">
             <section id="intro" ref={introRef}>
-                <div class="intro-content-wrapper">
+                <div className="intro-content-wrapper">
                     <h1 className="intro-header"><Typist avgTypingDelay={80}>Hello, grfn.sh<Typist.Backspace count={7} delay={200} /> Thomas here. </Typist></h1>
                     <FadeInSection>
                         <h2 className="intro-subtitle">Full-Stack Web Developer</h2>
