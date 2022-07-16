@@ -32,7 +32,7 @@ export default function About() {
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
         },
         {
-            label: "React.js",
+            label: "React",
             avatarsrc: "https://reactjs.org/logo-og.png",
         },
         {
@@ -40,7 +40,7 @@ export default function About() {
             avatarsrc: "https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg",
         },
         {
-            label: "HTML & CSS",
+            label: "HTML5 & CSS3",
             avatarsrc: "https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png",
         },
         {
@@ -52,7 +52,7 @@ export default function About() {
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png",
         },
         {
-            label: "Amazon Web Services",
+            label: "AWS",
             avatarsrc: "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
         },
     ];
@@ -65,7 +65,7 @@ export default function About() {
 
 
 
-                    <p style={{ lineHeight: "2em" }}>I am a Junior Web Developer based in the South West UK. I specialise in Full-Stack Web Development. I graduated with a First with Honours BSc degree in Applied Computing from UWE Bristol in July 2022. I plan on going back to University to hopefully achieve a Masters degree in Cyber Security.</p>
+                    <p style={{ lineHeight: "2em" }}>I am a Junior Web and Software Developer based in the South West UK. I specialise in Full-Stack Web Development. I graduated with a First-Class Honours BSc degree in Applied Computing from UWE Bristol in 2022. I plan on going back to University to hopefully achieve a Masters degree in Cyber Security.</p>
 
                     <p>Here are some things I've worked with:</p>
                     <ThemeProvider theme={theme}>
