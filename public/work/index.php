@@ -7,7 +7,7 @@ if (isset($_GET["offset"]))
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sort=updated&per_page=5&page=" . $page);
+curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sort=updated&per_page=4&page=" . $page);
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
