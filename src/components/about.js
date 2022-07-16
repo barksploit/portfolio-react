@@ -20,44 +20,40 @@ export default function About() {
 
     const technologies = [
         {
+            label: "PHP 8+",
+            avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png",
+        },
+        {
+            label: "Laravel 9+",
+            avatarsrc: "https://seeklogo.com/images/L/laravel-logo-9B01588B1F-seeklogo.com.png",
+        },
+        {
             label: "Javascript ES6+",
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-            white: false
         },
         {
             label: "React.js",
             avatarsrc: "https://reactjs.org/logo-og.png",
-            white: false
-        },
-        {
-            label: "PHP 8+",
-            avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png",
-            white: false
         },
         {
             label: "MySQL",
             avatarsrc: "https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg",
-            white: true
-        },
-        {
-            label: "Laravel",
-            avatarsrc: "https://seeklogo.com/images/L/laravel-logo-9B01588B1F-seeklogo.com.png",
-            white: true
         },
         {
             label: "HTML & CSS",
             avatarsrc: "https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png",
-            white: true
+        },
+        {
+            label: "WordPress",
+            avatarsrc: "https://cdn.cdnlogo.com/logos/w/65/wordpress.svg",
         },
         {
             label: "SCSS/SASS",
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png",
-            white: true
         },
         {
             label: "Amazon Web Services",
             avatarsrc: "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
-            white: false
         },
     ];
 
