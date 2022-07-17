@@ -75,7 +75,8 @@ export default function Intro() {
                             <ButtonGroup variant="outlined" aria-label="outlined primary button group">
                                 <Button onClick={() => window.location = 'mailto:tom.a.griffin@outlook.com'}>Contact me</Button>
                                 <Button onClick={() => { handleLearnMoreClick() }}>Learn more</Button>
-                            </ButtonGroup></ThemeProvider>
+                            </ButtonGroup>
+                        </ThemeProvider>
                     </FadeInSection>
                 </div>
             </section>

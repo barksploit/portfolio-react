@@ -73,7 +73,7 @@ export default function About() {
 
                             {technologies.map((tech_item, i) => {
                                 return (
-                                    <FadeInSection className="about-worked-with-chip" key={i} delay={`${i + 1}00ms`}>
+                                    <FadeInSection className="about-worked-with-chip" key={tech_item.label} delay={`${i + 1}00ms`}>
                                         <Chip avatar={<Avatar sx={{ bgcolor: "#FFF !important", margin: "0" }} alt="Natacha" src={tech_item.avatarsrc} />} label={tech_item.label} color="primary" variant="outlined" />
                                     </FadeInSection>
                                 );

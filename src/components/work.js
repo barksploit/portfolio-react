@@ -9,14 +9,14 @@ const outputWorks = works => {
     for (const iterator in works) {
         const work = works[iterator];
         arr.push(
-            <FadeInSection key={works[iterator]} delay={`${iterator}00ms`}>
+            <FadeInSection key={iterator} delay={`${iterator}00ms`}>
                 <a href={work.html_url} target="_blank" rel="noreferrer">
                     <div className="github-repository">
                         <h2 className='work-title'>{work.full_name}</h2>
                         <p className='work-description'>{work.description}</p>
-                        {work.topics.map((topic) => {
+                        {work.topics.map((topic, i) => {
                             return (
-                                <a href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"> <span key={topic} class="work-topic">{topic}</span></a>
+                                <span key={i} className="work-topic">{topic}</span>
                             )
                         })}
                     </div>
