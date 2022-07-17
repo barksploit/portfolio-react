@@ -55,9 +55,7 @@
                 display: inline-block;
                 color: #FFF;
                 transition: transform 0.2s;
-                &::after {
-                    content: "\00a0";
-                }
+                margin-right: 10px;
                 &:hover {
     
                     background-color: #333;
