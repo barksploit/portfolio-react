@@ -24,6 +24,17 @@
             box-sizing: border-box;
             word-break: break-word;
             transition: background-color 0.2s, transform 0.2s;
+
+            
+            &:hover {
+                background-color: #FFF;
+
+                transform: translateY(1em);
+
+                .work-title, .work-description, .work-topic {
+                    color: #000;
+                }
+            }
             
             .work-title, .work-description {
                 color: #FFF;
@@ -43,20 +54,17 @@
                 font-weight: bold;
                 display: inline-block;
                 color: #FFF;
+                transition: transform 0.2s;
                 &::after {
                     content: "\00a0";
                 }
-            }
-
-            &:hover {
-                background-color: #FFF;
-
-                transform: translateY(1em);
-
-                .work-title, .work-description, .work-topic {
-                    color: #000;
+                &:hover {
+    
+                    background-color: #333;
+                    color: #FFF;
                 }
             }
+
         
         }
     }
