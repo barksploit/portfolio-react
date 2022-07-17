@@ -25,11 +25,21 @@
             word-break: break-word;
             transition: background-color 0.2s, transform 0.2s;
 
+            .view-repository {
+                visibility: hidden;
+                display: block;
+                margin-top: 3em;
+            }
+
             
             &:hover {
                 background-color: #FFF;
 
                 transform: translateY(1em);
+
+                .view-repository {
+                    visibility: visible;
+                }
 
                 .work-title, .work-description, .work-topic {
                     color: #000;
