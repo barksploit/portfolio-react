@@ -41,7 +41,12 @@
 
         &:hover {
             transform: rotateX(-90deg);
+
+            .intro-social-media-link:nth-child(2) {
+                background-color: #FFF;
+            }
         }
+
     }
 
 
@@ -64,7 +69,6 @@
 
         &:nth-child(2) {
             transform: rotateX(90deg) translateZ(25px);
-            background-color: #FFF;
             color: #333;
         }
     }
