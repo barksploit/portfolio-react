@@ -16,7 +16,7 @@ const LoadingButton = (props) => {
     else if (props.loading) {
         return (
             <Button {...props} disabled>
-                <CircularProgress size={24} color="secondary" />
+                <CircularProgress size={18} color="secondary" />
             </Button>
         );
         // Default state
