@@ -20,6 +20,8 @@ const theme = createTheme({
 
 export default function About() {
 
+    // Object containing list of technologies I've worked with, and accompanying logos for the MUI avatar components
+
     const technologies = [
         {
             label: "PHP 8+",

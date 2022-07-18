@@ -21,6 +21,7 @@ const theme = createTheme({
 
 const outputWorks = works => {
     let arr = [];
+    // Unable to use map because object is not iterable, loop instead using for in control structure
     for (const iterator in works) {
         const work = works[iterator];
         arr.push(
@@ -45,10 +46,13 @@ const outputWorks = works => {
 
 export default function Intro() {
 
+    // Define state to store list of repositories
     const [works, setWorks] = useState([]);
 
     useEffect(() => {
         let page = 1;
+
+        // Fetch public GitHub repositories using PHP script querying GitHub REST API
         const fetchWorks = async () => {
             axios.get("https://grfn.sh/work/?offset=" + page).then((response) => {
                 setWorks(previousWorks => [...previousWorks, response.data]);

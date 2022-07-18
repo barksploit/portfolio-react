@@ -32,6 +32,8 @@ const handleLearnMoreClick = () => {
 }
 
 export default function Intro() {
+
+    // Initialise the GSAP ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
     const introRef = useRef();
