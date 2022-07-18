@@ -9,12 +9,18 @@
         opacity: 0.2;
     }
 
+    .load-more-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5em 0;
+    }    
+
     .works-container {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-auto-rows: 1fr;
         gap: 3em;
-    
     
         .github-repository {
             padding: 3em;
@@ -30,7 +36,6 @@
                 display: block;
                 margin-top: 3em;
             }
-
             
             &:hover {
                 background-color: #FFF;

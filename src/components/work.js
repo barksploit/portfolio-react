@@ -9,15 +9,17 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme({
     palette: {
         primary: {
-            // Purple and green play nicely together.
             main: '#000',
         },
         secondary: {
-            // This is green.A700 as hex.
-            main: '#11cb5f',
+            main: '#FFF',
         },
     },
 });
+
+const handleLoadMore = (e) => {
+    
+}
 
 const outputWorks = works => {
     let arr = [];
@@ -71,7 +73,11 @@ export default function Intro() {
                 <div className="works-container">
                     {outputWorks(works[0])}
                 </div>
-
+                <div className="load-more-container">
+                    <ThemeProvider theme={theme}>
+                        <Button onClick={handleLoadMore} className="load-more" variant="outlined" color="secondary">Load More</Button>
+                    </ThemeProvider>
+                </div>
             </FadeInSection>
 
         </section>
