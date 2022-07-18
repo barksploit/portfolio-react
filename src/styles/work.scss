@@ -23,8 +23,11 @@
             border-radius: 10px;
             height: 100%;
             box-sizing: border-box;
+            background-image: linear-gradient(to bottom right, transparent 50%, #FFF 50%);
+            background-size: 200% 200%;
+            background-repeat: no-repeat;
             word-break: break-word;
-            transition: background-color 0.2s, transform 0.2s;
+            transition: background-position 0.2s, transform 0.2s;
 
             .view-repository {
                 visibility: hidden;
@@ -33,7 +36,7 @@
             }
             
             &:hover {
-                background-color: #FFF;
+                background-position: 100% 100%;
 
                 transform: translateY(1em);
 

@@ -27,6 +27,7 @@ export default function Credits() {
                         <p>GitHub REST API</p>
                         <br />
                         <p>This is a work in progress so check back often!</p>
+                        <br />
                         <p>*/</p>
 
 
