@@ -18,7 +18,7 @@ export default function Credits() {
                         <p>React</p>
                         <p>react-scroll</p>
                         <p>axios</p>
-                        <p>MUI</p>
+                        <p>Material UI</p>
                         <p>GSAP</p>
                         <p>ScrollTrigger</p>
                         <p>SCSS</p>
