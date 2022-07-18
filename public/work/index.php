@@ -26,7 +26,7 @@ curl_setopt($ch, CURLOPT_USERPWD, $_ENV["GITHUB_API_USERNAME"] . ":" . $_ENV["GI
 // Define HTTP request headers
 $headers = [
     'Accept: application/vnd.github+json',
-    'User-Agent: barksploit'
+    'User-Agent: '.$_ENV["GITHUB_API_USERNAME"]
 ];
 
 // Assign $headers to the CURL request
