@@ -18,10 +18,6 @@ const theme = createTheme({
     },
 });
 
-const handleLoadMore = (e) => {
-
-}
-
 const outputWorks = works => {
     let arr = [];
     // Unable to use map because object is not iterable, loop instead using for in control structure
@@ -51,6 +47,20 @@ export default function Intro() {
 
     // Define state to store list of repositories
     const [works, setWorks] = useState([]);
+    const [loadingButton, setLoading] = useState({
+        loading: false,
+        finished: false
+    });
+
+    const handleLoadMore = () => {
+        setLoading({ loading: true });
+        setTimeout(() => {
+            setLoading({ finished: true });
+            setTimeout(() => {
+                setLoading({ loading: false, finished: false });
+            });
+        }, 2500);
+    }
 
     useEffect(() => {
         let page = 1;
@@ -76,7 +86,7 @@ export default function Intro() {
                 </div>
                 <div className="load-more-container">
                     <ThemeProvider theme={theme}>
-                        <Button onClick={handleLoadMore} className="load-more" variant="outlined" color="secondary">Load More</Button>
+                        <LoadingButton onClick={handleLoadMore} loading={loadingButton.loading} done={loadingButton.finished} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
                     </ThemeProvider>
                 </div>
             </FadeInSection>

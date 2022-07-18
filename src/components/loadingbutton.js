@@ -2,24 +2,24 @@ import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import CheckIcon from '@mui/icons-material/Check';
 
-const LoadingButton = ({ classes, loading = false, done = false, ...other }) => {
+const LoadingButton = (props) => {
 
-    if (done) {
+    if (props.done) {
         return (
-            <Button className={classes.button} {...other} disabled>
+            <Button {...props} disabled>
                 <CheckIcon />
             </Button>
         );
     }
-    else if (loading) {
+    else if (props.loading) {
         return (
-            <Button className={classes.button} {...other}>
-                <CircularProgress />
+            <Button {...props} disabled>
+                <CircularProgress size={24} color="secondary" />
             </Button>
         );
     } else {
         return (
-            <Button className={classes.button} {...other} />
+            <Button {...props}>load more</Button>
         );
     }
 }
