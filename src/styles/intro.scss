@@ -33,6 +33,7 @@
         padding: 1rem;
         position: relative;
         display: inline-block;
+        overflow: hidden;
 
         > svg {
             transition: transform 0.3s;
@@ -41,11 +42,12 @@
         &::before {
             content: "";
             position: absolute;
-            left: 0;
-            top: 0;
             width: 100%;
-            transition: height 0.2s, color 0.2s;
-            height: 0%;
+            left:0;
+            transition: bottom 0.2s, color 0.2s;
+            height: 100%;
+            bottom: CALC(100% + 1rem);
+            z-index: -1;
             background-color: #FFF;
         }
 
@@ -58,7 +60,7 @@
             }
 
             &::before {
-                height: 100%;
+                bottom: 0;
             }
 
         }
