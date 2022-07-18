@@ -1,0 +1,26 @@
+@import "./variables.scss";
+
+#credits {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 500px 0 500px 15rem;
+    align-items: center;
+
+    h1 {
+        font-weight: lighter;
+        opacity: 0.2;
+    }
+
+    .credits-content-wrapper {
+        grid-column: 1 / 1;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    #credits {
+        grid-template-columns: 1fr;
+        margin: 500px 30px;
+    }
+}

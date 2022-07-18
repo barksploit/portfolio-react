@@ -14,6 +14,8 @@ function App() {
       <About />
 
       <Work />
+
+      <Credits />
     </div>
   );
 }
