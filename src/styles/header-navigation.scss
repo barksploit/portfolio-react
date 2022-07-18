@@ -2,7 +2,8 @@
 
 .desktop-navigation {
 
-    padding: 25px 25px 0 0;
+    padding: 4em 8em;
+    text-align: right;
 
     .active {
         background-color: #FFF;
@@ -17,6 +18,7 @@
     li {
         display: inline-block;
         line-height: 2em;
+        margin-right: 1em;
     }
 
     a {
