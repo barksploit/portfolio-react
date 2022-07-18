@@ -1,0 +1,10 @@
+{
+    "name": "tomag/portfolio-react",
+    "authors": [
+        {
+            "name": "Thomas Griffin",
+            "email": "tom@grfn.sh"
+        }
+    ],
+    "require": {}
+}
