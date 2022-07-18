@@ -53,7 +53,13 @@ export default function Intro() {
     });
 
     const handleLoadMore = () => {
+        // Show loadingbutton
         setLoading({ loading: true });
+
+
+        // TODO fetch more repos
+
+        // Test that loading works by simulating data fetching using setTimeout function
         setTimeout(() => {
             setLoading({ finished: true });
             setTimeout(() => {

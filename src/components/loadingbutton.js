@@ -4,6 +4,7 @@ import CheckIcon from '@mui/icons-material/Check';
 
 const LoadingButton = (props) => {
 
+    // Loading has finished
     if (props.done) {
         return (
             <Button {...props} disabled>
@@ -11,12 +12,14 @@ const LoadingButton = (props) => {
             </Button>
         );
     }
+    // Trying to load
     else if (props.loading) {
         return (
             <Button {...props} disabled>
                 <CircularProgress size={24} color="secondary" />
             </Button>
         );
+        // Default state
     } else {
         return (
             <Button {...props}>load more</Button>
