@@ -1,7 +1,9 @@
 #work {
     min-height: 100vh;
-    margin: 500px 15rem;
+    height: 100vh;
+    margin: 5em 0 5em 15rem;
     align-items: center;
+    box-sizing: border-box;
     display: grid;
 
     .load-more-container {
@@ -85,7 +87,7 @@
 
 @media (max-width: 1600px) {
     #work {
-        margin: 500px 30px;
+        margin: 0 30px;
     }
     
     #work .works-container {

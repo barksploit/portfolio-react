@@ -3,8 +3,10 @@
 #about {
     display: grid;
     min-height: 100vh;
+    height: 100vh;
+    box-sizing: border-box;
     grid-template-columns: repeat(2, 1fr);
-    margin: 500px 0 500px 15rem;
+    margin: 5em 0 5em 15rem;
     align-items: center;
 
     .about-content-wrapper {
@@ -20,6 +22,6 @@
 @media (max-width: 1024px) {
     #about {
         grid-template-columns: 1fr;
-        margin: 500px 30px;
+        margin: 0 30px;
     }
 }

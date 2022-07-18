@@ -3,9 +3,11 @@
 #credits {
     display: grid;
     min-height: 100vh;
+    height: 100vh;
     grid-template-columns: repeat(2, 1fr);
-    margin: 500px 0 500px 15rem;
+    margin: 5em 0 5em 15rem;
     align-items: center;
+    box-sizing: border-box;
 
     .credits-content-wrapper {
         grid-column: 1 / 1;
