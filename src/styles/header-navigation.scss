@@ -11,17 +11,16 @@
     a::before {
         content: "";
         position: absolute;
-        left: 0;
-        top: 0;
         width: 100%;
-        transition: height 0.2s, color 0.2s;
-        height: 0%;
+        transition: bottom 0.2s, color 0.2s;
+        height: 100%;
+        bottom: CALC(100% + 25px);
         z-index: -1;
         background-color: #FFF;
     }
 
     .active::before, a:hover::before {
-        height: 100%;
+        bottom: 0;
     }
 
     ul {
@@ -32,6 +31,7 @@
     li {
         display: inline-block;
         line-height: 2em;
+        overflow: hidden;
     }
 
     a {
