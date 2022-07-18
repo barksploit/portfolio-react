@@ -58,19 +58,39 @@ export default function Intro() {
                     <FadeInSection>
                         <h2 className="intro-subtitle">Full-Stack Web Developer</h2>
                         <div className="intro-social-media-links">
+                            <div className="intro-social-media-link-wrapper">
                             <Link href="https://twitter.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
                                 <TwitterIcon />
+                            </Link>
+                            <Link href="https://twitter.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
+                                <TwitterIcon />
+                            </Link>
+                            </div>
+                            <div className="intro-social-media-link-wrapper">
+                                <Link href="https://github.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
+                                <GitHubIcon />
                             </Link>
                             <Link href="https://github.com/barksploit" className="intro-social-media-link" target="_blank" rel="noopener">
                                 <GitHubIcon />
                             </Link>
+                            </div>
+                            <div className="intro-social-media-link-wrapper">
                             <Link href="https://www.linkedin.com/in/thomas-anthony-griffin/" className="intro-social-media-link" target="_blank" rel="noopener">
                                 <LinkedInIcon />
+                            </Link>
+                            <Link href="https://www.linkedin.com/in/thomas-anthony-griffin/" className="intro-social-media-link" target="_blank" rel="noopener">
+                                <LinkedInIcon />
+                            </Link>
+                            </div>
+                            <div className="intro-social-media-link-wrapper">
+                            <Link href="https://www.instagram.com/barksploit/" className="intro-social-media-link" target="_blank" rel="noopener">
+                                <InstagramIcon />
                             </Link>
                             <Link href="https://www.instagram.com/barksploit/" className="intro-social-media-link" target="_blank" rel="noopener">
                                 <InstagramIcon />
                             </Link>
-                        </div >
+                            </div>
+                        </div>
                         <ThemeProvider theme={theme}>
                             <ButtonGroup variant="outlined" aria-label="outlined primary button group">
                                 <Button onClick={() => window.location = 'mailto:tom@grfn.sh'}>Contact me</Button>
