@@ -15,8 +15,8 @@ const LoadingButton = (props) => {
     // Trying to load
     else if (props.loading) {
         return (
-            <Button {...props} disabled>
-                <CircularProgress size={18} color="secondary" />
+            <Button style={{ position: "relative" }} {...props}><span style={{ opacity: "0" }}>load more</span>
+                <CircularProgress style={{ position: "absolute" }} size={18} color="secondary" />
             </Button>
         );
         // Default state
