@@ -4,7 +4,7 @@ import FadeInSection from './fadeinsection';
 export default function Credits() {
     return (
 
-        <section id="credits">
+        <section id="credits" class="section-padding">
             <div className="credits-content-wrapper">
                 <FadeInSection>
   
