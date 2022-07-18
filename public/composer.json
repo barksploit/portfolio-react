@@ -1,10 +1,12 @@
 {
-    "name": "tomag/portfolio-react",
+    "name": "tom/portfolio-react",
     "authors": [
         {
             "name": "Thomas Griffin",
             "email": "tom@grfn.sh"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
 }

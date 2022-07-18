@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # php
-/vendor/
-.env
+/public/vendor
+/public/.env
