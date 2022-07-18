@@ -9,7 +9,7 @@ export default function Credits() {
                 <FadeInSection>
                     <h2 className='section-header-lighter section-header-translucent section-header-font-size'>&lt;credits&gt;</h2>
                     
-                    <div class="credits-comment">
+                    <div className="credits-comment">
                         {/* eslint-disable-next-line */}
                         <p>/*</p>
                         <br />
