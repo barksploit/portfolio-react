@@ -23,6 +23,7 @@ export default function Credits() {
                         <p>ScrollTrigger</p>
                         <p>SCSS</p>
                         <p>PHP</p>
+                        <p>php-cURL</p>
                         <p>GitHub REST API</p>
                         <br />
                         <p>*/</p>
