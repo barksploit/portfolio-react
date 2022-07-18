@@ -26,7 +26,9 @@ export default function Credits() {
                         <p>php-cURL</p>
                         <p>GitHub REST API</p>
                         <br />
+                        <p>This is a work in progress so check back often!</p>
                         <p>*/</p>
+
 
                     </div>
                 </FadeInSection>
