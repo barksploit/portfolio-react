@@ -94,4 +94,20 @@
         grid-template-columns: repeat(1, minmax(0, 1fr));
         grid-auto-rows: auto;
     }
+
+    #work .works-container .github-repository {
+        background-color: #FFF;
+
+        &:hover {
+            transform: none
+        }
+
+        .view-repository {
+            visibility: visible;
+        }
+
+        .work-title, .work-description, .work-topic {
+            color: #000;
+        }
+    }
 }
