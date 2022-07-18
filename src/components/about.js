@@ -63,8 +63,6 @@ export default function About() {
         <section id="about">
             <div className="about-content-wrapper">
                 <FadeInSection>
-                    <h2 className='section-header-lighter section-header-translucent section-header-font-size'>&lt;about&gt;</h2>
-
                     <p style={{ lineHeight: "2em" }}>I am a Junior Web and Software Developer based in South West England. I specialise in Full-Stack Web Development. I graduated with a First-Class Honours BSc degree in Applied Computing from UWE Bristol in 2022. I plan on going back to University and go on to achieve a Masters degree in Cyber Security.</p>
 
                     <p>Here are some things I've worked with:</p>

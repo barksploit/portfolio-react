@@ -85,9 +85,7 @@ export default function Intro() {
         <section id="work">
 
             <FadeInSection>
-
-                <h2 className='section-header-lighter section-header-translucent section-header-font-size'>&lt;work&gt;</h2>
-                <div className="works-container">
+             <div className="works-container">
                     {outputWorks(works[0])}
                 </div>
                 <div className="load-more-container">
