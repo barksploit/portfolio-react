@@ -7,7 +7,7 @@ export default function Credits() {
         <section id="credits">
             <div className="credits-content-wrapper">
                 <FadeInSection>
-                    <h1>&lt;credits&gt;</h1>
+                    <h2 className='section-header-lighter section-header-translucent section-header-font-size'>&lt;credits&gt;</h2>
 
                     <div class="credits-comment">
 
