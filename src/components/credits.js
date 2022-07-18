@@ -15,14 +15,12 @@ export default function Credits() {
                         <p>Made with</p>
                         <br />
                         <p>React</p>
-                        <p>react-scroll</p>
-                        <p>axios</p>
+                        <p>Axios</p>
                         <p>Material UI</p>
                         <p>GSAP</p>
                         <p>ScrollTrigger</p>
                         <p>SCSS</p>
                         <p>PHP</p>
-                        <p>php-cURL</p>
                         <p>GitHub REST API</p>
                         <br />
                         <p>This is a work in progress so check back often!</p>
