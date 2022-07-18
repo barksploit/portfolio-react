@@ -4,9 +4,24 @@
 
     padding: 25px 25px 0 0;
 
-    .active {
-        background-color: rgb(255 255 255 / 24%);
-        color:#FFF
+    .active, a:hover {
+        color: #333;
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transition: height 0.2s, color 0.2s;
+        height: 0%;
+        z-index: -1;
+        background-color: #FFF;
+    }
+
+    .active::before, a:hover::before {
+        height: 100%;
     }
 
     ul {
@@ -19,14 +34,10 @@
         line-height: 2em;
     }
 
-    li::after {
-        content: "\00a0";
-        display: inline-block;
-    }
-
     a {
         text-decoration: none;
         cursor: pointer;
+        position: relative;
         padding: 5px;
         color: $textcolor;
     }
