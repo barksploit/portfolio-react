@@ -92,7 +92,7 @@ export default function Intro() {
                 </div>
                 <div className="load-more-container">
                     <ThemeProvider theme={theme}>
-                        <LoadingButton onClick={handleLoadMore} loading={loadingButton.loading} done={loadingButton.finished} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
+                        <LoadingButton onClick={handleLoadMore} loading={loadingButton.loading ? 1 : undefined} done={loadingButton.finished ? 1 : undefined} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
                     </ThemeProvider>
                 </div>
             </FadeInSection>
