@@ -82,7 +82,7 @@ export default function Intro() {
     }, []);
 
     return (
-        <section id="work">
+        <section id="work" class="section-padding">
 
             <FadeInSection>
              <div className="works-container">

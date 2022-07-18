@@ -12,8 +12,21 @@ body {
     background-image: $bggradient;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: lighter;
+}
+
 h1 {
     font-size: 4rem;
+}
+
+.section-padding {
+    padding: 5em 0;
 }
 
 .section-header-font-size {
@@ -26,15 +39,6 @@ h1 {
 
 .section-header-translucent {
     opacity: 0.1;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-h1, h2, h3, h4, h5 {
-    font-weight: lighter;
 }
 
 .fade-in-section {
