@@ -30,7 +30,10 @@ export default function Intro() {
 
     const fetchWorks = async () => {
         axios.get("https://grfn.sh/work/?page=" + worksPage).then((response) => {
-            setWorks(previousWorks => [...previousWorks, response.data[0]]);
+            for (const i in response.data) {
+                console.log(response.data);
+                setWorks(previousWorks => [...previousWorks, response.data[i]]);
+            }
             setWorksPage(worksPage + 1);
             setTimeout(() => {
                 setLoading({ finished: true });
