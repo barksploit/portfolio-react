@@ -7,7 +7,7 @@ const LoadingButton = (props) => {
     // Loading has finished
     if (props.done) {
         return (
-            <Button {...props}>
+            <Button loading={props.loading} done={props.done} className={props.className} variant={props.variant} color={props.color}>
                 <CheckIcon size={18} color="secondary" />
             </Button>
         );
@@ -15,7 +15,7 @@ const LoadingButton = (props) => {
     // Trying to load
     else if (props.loading) {
         return (
-            <Button {...props}>loading
+            <Button loading={props.loading} done={props.done} className={props.className} variant={props.variant} color={props.color}>loading
                 <CircularProgress style={{ marginLeft: "10px" }} size={18} color="secondary" />
             </Button>
         );
