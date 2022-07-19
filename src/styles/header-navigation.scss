@@ -6,7 +6,8 @@
     text-align: right;
 
     .active {
-        border-bottom: 1px solid white;
+        background-color: #fff;
+        color: #000;
     }
 
     ul {
@@ -24,7 +25,7 @@
         cursor: pointer;
         position: relative;
         box-sizing: border-box;
-        padding-bottom: 10px;
+        padding: 10px;
         color: $textcolor;
         font-size: 1em;
         font-family: $codefont;
