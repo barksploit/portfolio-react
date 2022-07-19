@@ -28,21 +28,27 @@ export default function Intro() {
     });
     const [worksPage, setWorksPage] = useState(1);
 
+    const fetchWorks = async () => {
+        axios.get("https://grfn.sh/work/?page=" + worksPage).then((response) => {
+            setWorks(previousWorks => [...previousWorks, response.data[0]]);
+            setWorksPage(worksPage + 1);
+            setTimeout(() => {
+                setLoading({ finished: true });
+                setTimeout(() => {
+                    setLoading({
+                        loading: false,
+                        finished: false
+                    })
+                }, 1500);
+            }, 500);
+        });
+    }
+
     const getAllRepos = () => {
         // Fetch public GitHub repositories using PHP script querying GitHub REST API
         setLoading({ loading: true });
+        fetchWorks();
 
-        setTimeout(() => {
-            axios.get("https://grfn.sh/work/?page=" + worksPage).then((response) => {
-                setWorksPage(worksPage + 1);
-                setLoading({ finished: true });
-                setWorks(previousWorks => [...previousWorks, response.data[0]]);
-                setTimeout(() => {
-                    setLoading({ loading: false, finished: false });
-                }, 2500);
-
-            });
-        }, 2500);
     }
 
     useEffect(() => {
@@ -78,7 +84,7 @@ export default function Intro() {
 
                 <div className="load-more-container">
                     <ThemeProvider theme={theme}>
-                        <LoadingButton onClick={getAllRepos} loading={loadingButton.loading ? 1 : undefined} done={loadingButton.finished ? 1 : undefined} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
+                        <LoadingButton onClick={getAllRepos} loading={loadingButton.loading ? 1 : 0} done={loadingButton.finished ? 1 : 0} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
                     </ThemeProvider>
                 </div>
             </FadeInSection>

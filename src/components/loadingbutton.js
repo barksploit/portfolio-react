@@ -7,8 +7,8 @@ const LoadingButton = (props) => {
     // Loading has finished
     if (props.done) {
         return (
-            <Button {...props} disabled>
-                <CheckIcon />
+            <Button {...props}>
+                <CheckIcon size={18} color="secondary" />
             </Button>
         );
     }
