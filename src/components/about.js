@@ -60,7 +60,7 @@ export default function About() {
     ];
 
     return (
-        <section id="about" class="section-padding">
+        <section id="about" className="section-padding">
             <div className="about-content-wrapper">
                 <FadeInSection>
                     <p style={{ lineHeight: "2em" }}>I am a Junior Web and Software Developer based in South West England. I specialise in Full-Stack Web Development. I graduated with a First-Class Honours BSc degree in Applied Computing from UWE Bristol in 2022. I plan on going back to University and go on to achieve a Masters degree in Cyber Security.</p>

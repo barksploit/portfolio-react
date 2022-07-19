@@ -8,14 +8,14 @@ $dotenv->load();
 $page = 1;
 
 // If the offset GET parameter is set, overwrite $page with its value
-if (isset($_GET["offset"]))
-    $page = $_GET["offset"];
+if (isset($_GET["page"]))
+    $page = $_GET["page"];
 
 // Initialise CURL
 $ch = curl_init();
 
 // Configure CURL URL
-curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sort=updated&per_page=3&page=" . $page);
+curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sort=updated&per_page=1&page=" . $page);
 
 // Return response as a string on execution
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -26,7 +26,7 @@ curl_setopt($ch, CURLOPT_USERPWD, $_ENV['GITHUB_API_USERNAME'] . ":" . $_ENV["GI
 // Define HTTP request headers
 $headers = [
     'Accept: application/vnd.github+json',
-    'User-Agent: '.$_ENV['GITHUB_API_USERNAME']
+    'User-Agent: ' . $_ENV['GITHUB_API_USERNAME']
 ];
 
 // Assign $headers to the CURL request
@@ -35,7 +35,9 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 // Execute HTTP request
 $output = curl_exec($ch);
 
+header('Content-Type: application/json');
+
 // Output HTTP request response
-print_r($output);
+exit($output);
 
 curl_close($ch);

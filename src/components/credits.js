@@ -4,10 +4,10 @@ import FadeInSection from './fadeinsection';
 export default function Credits() {
     return (
 
-        <section id="credits" class="section-padding">
+        <section id="credits" className="section-padding">
             <div className="credits-content-wrapper">
                 <FadeInSection>
-  
+
                     <div className="credits-comment">
                         {/* eslint-disable-next-line */}
                         <p>/*</p>

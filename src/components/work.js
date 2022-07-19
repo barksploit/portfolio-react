@@ -18,31 +18,6 @@ const theme = createTheme({
     },
 });
 
-const outputWorks = works => {
-    let arr = [];
-    // Unable to use map because object is not iterable, loop instead using for in control structure
-    for (const iterator in works) {
-        const work = works[iterator];
-        arr.push(
-            <FadeInSection key={iterator} delay={`${iterator}00ms`}>
-                <div className="github-repository">
-                    <h2 className='work-title'>{work.full_name}</h2>
-                    <p className='work-description'>{work.description}</p>
-                    {work.topics.map((topic, i) => {
-                        return (
-                            <a key={i} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
-                        )
-                    })}
-                    <ThemeProvider theme={theme}>
-                        <Button className="view-repository" onClick={() => window.location = `${work.html_url}`} variant="outlined">view repository</Button>
-                    </ThemeProvider>
-                </div>
-            </FadeInSection>
-        )
-    }
-    return arr;
-}
-
 export default function Intro() {
 
     // Define state to store list of repositories
@@ -51,46 +26,59 @@ export default function Intro() {
         loading: false,
         finished: false
     });
+    const [worksPage, setWorksPage] = useState(1);
 
-    const handleLoadMore = () => {
-        // Show loadingbutton
+    const getAllRepos = () => {
+        // Fetch public GitHub repositories using PHP script querying GitHub REST API
         setLoading({ loading: true });
 
-
-        // TODO fetch more repos
-
-        // Test that loading works by simulating data fetching using setTimeout function
         setTimeout(() => {
-            setLoading({ finished: true });
-            setTimeout(() => {
-                setLoading({ loading: false, finished: false });
+            axios.get("https://grfn.sh/work/?page=" + worksPage).then((response) => {
+                setWorksPage(worksPage + 1);
+                setLoading({ finished: true });
+                setWorks(previousWorks => [...previousWorks, response.data[0]]);
+                setTimeout(() => {
+                    setLoading({ loading: false, finished: false });
+                }, 2500);
+
             });
         }, 2500);
     }
 
     useEffect(() => {
-        let page = 1;
 
-        // Fetch public GitHub repositories using PHP script querying GitHub REST API
-        const fetchWorks = async () => {
-            axios.get("https://grfn.sh/work/?offset=" + page).then((response) => {
-                setWorks(previousWorks => [...previousWorks, response.data]);
-            });
-        }
+        getAllRepos();
 
-        fetchWorks();
     }, []);
 
     return (
-        <section id="work" class="section-padding">
+        <section id="work" className="section-padding">
 
             <FadeInSection>
-             <div className="works-container">
-                    {outputWorks(works[0])}
+                <div className="works-container">
+                    {works?.map((work, i) => {
+                        return (
+                            <FadeInSection key={work.id} delay={`${i}00ms`}>
+                                <div className="github-repository">
+                                    <h2 className='work-title'>{work.full_name}</h2>
+                                    <p className='work-description'>{work.description}</p>
+                                    {work.topics.map((topic, e) => {
+                                        return (
+                                            <a key={e} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
+                                        )
+                                    })}
+                                    <ThemeProvider theme={theme}>
+                                        <Button className="view-repository" onClick={() => window.location = `${work.html_url}`} variant="outlined">view repository</Button>
+                                    </ThemeProvider>
+                                </div>
+                            </FadeInSection>
+                        );
+                    })}
                 </div>
+
                 <div className="load-more-container">
                     <ThemeProvider theme={theme}>
-                        <LoadingButton onClick={handleLoadMore} loading={loadingButton.loading ? 1 : undefined} done={loadingButton.finished ? 1 : undefined} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
+                        <LoadingButton onClick={getAllRepos} loading={loadingButton.loading ? 1 : undefined} done={loadingButton.finished ? 1 : undefined} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
                     </ThemeProvider>
                 </div>
             </FadeInSection>
