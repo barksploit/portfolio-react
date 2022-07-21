@@ -6,16 +6,18 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 $page = 1;
+$perpage = 3;
 
 // If the offset GET parameter is set, overwrite $page with its value
-if (isset($_GET["page"]))
+if (isset($_GET["page"]) and isset($_GET["perpage"]))
     $page = $_GET["page"];
+    $perpage = $_GET["perpage"];
 
 // Initialise CURL
 $ch = curl_init();
 
 // Configure CURL URL
-curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sort=updated&per_page=3&page=" . $page);
+curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sort=updated&per_page=".$perpage."&page=" . $page);
 
 // Return response as a string on execution
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

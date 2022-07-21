@@ -29,7 +29,15 @@ export default function Intro() {
     const [worksPage, setWorksPage] = useState(1);
 
     const fetchWorks = async () => {
-        axios.get("https://grfn.sh/work/?page=" + worksPage).then((response) => {
+        const viewportWidth = window.innerWidth;
+        let perPage = 1;
+        
+        if (viewportWidth > 1600 || viewportWidth < 768) {
+            perPage = 3;
+        } else if (viewportWidth < 1600 && viewportWidth > 768) {
+            perPage = 2;
+        }
+        axios.get("https://grfn.sh/work/?page=" + worksPage + "&perpage=" + perPage).then((response) => {
             for (const i in response.data) {
                 console.log(response.data);
                 setWorks(previousWorks => [...previousWorks, response.data[i]]);
