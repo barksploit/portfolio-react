@@ -17,7 +17,7 @@ if (isset($_GET["page"]) and isset($_GET["perpage"]))
 $ch = curl_init();
 
 // Configure CURL URL
-curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sort=updated&per_page=".$perpage."&page=" . $page);
+curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sort=pushed&per_page=".$perpage."&page=" . $page);
 
 // Return response as a string on execution
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
