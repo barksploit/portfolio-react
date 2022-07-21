@@ -28,7 +28,7 @@ export default function Intro() {
     });
     const [worksPage, setWorksPage] = useState(1);
 
-    const fetchWorks = async () => {
+    const fetchWorks = async (buttonClick) => {
         const viewportWidth = window.innerWidth;
         let perPage = 1;
         
@@ -39,32 +39,34 @@ export default function Intro() {
         }
         axios.get("https://grfn.sh/work/?page=" + worksPage + "&perpage=" + perPage).then((response) => {
             for (const i in response.data) {
-                console.log(response.data);
                 setWorks(previousWorks => [...previousWorks, response.data[i]]);
             }
             setWorksPage(worksPage + 1);
+            
             setTimeout(() => {
                 setLoading({ finished: true });
+                if (buttonClick) Array.from(document.querySelectorAll('.github-repository')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
                 setTimeout(() => {
                     setLoading({
                         loading: false,
                         finished: false
-                    })
+                    });
+                    
                 }, 1500);
             }, 500);
         });
     }
 
-    const getAllRepos = () => {
+    const getAllRepos = (buttonClick) => {
         // Fetch public GitHub repositories using PHP script querying GitHub REST API
         setLoading({ loading: true });
-        fetchWorks();
+        fetchWorks(buttonClick);
 
     }
 
     useEffect(() => {
 
-        getAllRepos();
+        getAllRepos(false);
 
     }, []);
 
@@ -95,7 +97,7 @@ export default function Intro() {
 
                 <div className="load-more-container">
                     <ThemeProvider theme={theme}>
-                        <LoadingButton onClick={getAllRepos} loading={loadingButton.loading ? 1 : 0} done={loadingButton.finished ? 1 : 0} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
+                        <LoadingButton onClick={() => getAllRepos(true)} loading={loadingButton.loading ? 1 : 0} done={loadingButton.finished ? 1 : 0} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
                     </ThemeProvider>
                 </div>
             </FadeInSection>
