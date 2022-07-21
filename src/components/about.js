@@ -34,7 +34,7 @@ export default function About() {
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
         },
         {
-            label: "React",
+            label: "ReactJS",
             avatarsrc: "https://reactjs.org/logo-og.png",
         },
         {
@@ -46,16 +46,20 @@ export default function About() {
             avatarsrc: "https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png",
         },
         {
-            label: "WordPress",
-            avatarsrc: "https://cdn.cdnlogo.com/logos/w/65/wordpress.svg",
-        },
-        {
             label: "SCSS/SASS",
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png",
         },
         {
-            label: "Amazon Web Services",
+            label: "WordPress",
+            avatarsrc: "https://cdn.cdnlogo.com/logos/w/65/wordpress.svg",
+        },
+        {
+            label: "AWS",
             avatarsrc: "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
+        },
+        {
+            label: "Docker",
+            avatarsrc: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png",
         },
     ];
 
