@@ -43,19 +43,16 @@ h1 {
 
 .fade-in-section {
     opacity: 0;
-    visibility: hidden;
     transition: opacity .6s ease-out;
 }
 
 .is-visible {
     opacity: 1;
-    -webkit-transform: none;
-    transform: none;
     animation-name: moveup;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
-    visibility: visible;
+    animation-iteration-count: 1;
 }
 
 @keyframes moveup {
