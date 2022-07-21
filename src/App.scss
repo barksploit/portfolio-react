@@ -42,7 +42,7 @@ h1 {
 }
 
 .fade-in-section {
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity .6s ease-out, transform .6s ease-out;
     opacity: 0;
     transform: translateY(10vh);
 }
