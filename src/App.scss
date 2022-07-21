@@ -52,13 +52,11 @@ h1 {
 
 @keyframes moveup {
     from {
-        -webkit-transform: translateY(10vh);
         transform: translateY(10vh);
         opacity: 0;
     }
     to {
-        -webkit-transform: none;
-        transform: none;
+        transform: translateY(0);
         opacity: 1;
     }
 }
