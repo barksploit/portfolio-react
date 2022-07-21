@@ -34,6 +34,10 @@ export default function About() {
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
         },
         {
+            label: "jQuery",
+            avatarsrc: "https://avatars.githubusercontent.com/u/70142?s=280&v=4",
+        },
+        {
             label: "ReactJS",
             avatarsrc: "https://reactjs.org/logo-og.png",
         },
@@ -56,10 +60,6 @@ export default function About() {
         {
             label: "AWS",
             avatarsrc: "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
-        },
-        {
-            label: "Docker",
-            avatarsrc: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png",
         },
     ];
 
