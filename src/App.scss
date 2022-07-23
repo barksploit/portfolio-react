@@ -45,6 +45,7 @@ h1 {
     transition: opacity .6s ease-out, transform .6s ease-out;
     opacity: 0;
     transform: translateY(10vh);
+    will-change: opacity, transform;
 }
 
 .is-visible {
