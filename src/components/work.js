@@ -50,10 +50,7 @@ export default function Intro() {
                     setWorks(previousWorks => [...previousWorks, response.data[i]]);
                 }
                 setWorksPage(worksPage + 1);
-
-
                 setLoading({ finished: true });
-
                 setTimeout(() => {
                     if (buttonClick) Array.from(document.querySelectorAll('.github-repository')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
                     setLoading({
@@ -62,7 +59,7 @@ export default function Intro() {
                     });
 
                 }, 500);
-            }, 500);
+            }, 2000);
 
         });
     }
