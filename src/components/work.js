@@ -110,19 +110,17 @@ export default function Intro() {
             <div className="works-container">
                 {works?.map((work, i) => {
                     return (
-                        <FadeInSection transform={false} key={work.id} delay={`${i}00ms`}>
-                            <div className="github-repository">
-                                <h2 className='work-title'>{work.full_name}</h2>
-                                <p className='work-description'>{work.description}</p>
-                                {work.topics.map((topic, e) => {
-                                    return (
-                                        <a key={e} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
-                                    )
-                                })}
-                                <ThemeProvider theme={theme}>
-                                    <Button className="view-repository" onClick={() => window.location = `${work.html_url}`} variant="outlined">view repository</Button>
-                                </ThemeProvider>
-                            </div>
+                        <FadeInSection className="github-repository" transform={false} key={work.id} delay={`${i}00ms`}>
+                            <h2 className='work-title'>{work.full_name}</h2>
+                            <p className='work-description'>{work.description}</p>
+                            {work.topics.map((topic, e) => {
+                                return (
+                                    <a key={e} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
+                                )
+                            })}
+                            <ThemeProvider theme={theme}>
+                                <Button className="view-repository" onClick={() => window.location = `${work.html_url}`} variant="outlined">view repository</Button>
+                            </ThemeProvider>
                         </FadeInSection>
                     );
                 })}
