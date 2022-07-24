@@ -35,7 +35,7 @@ export default function Intro() {
 
     const viewportWidth = window.innerWidth;
 
-    if (viewportWidth > 1600 || viewportWidth < 768) {
+    if (viewportWidth > 1600) {
         perPage = 3;
     } else if (viewportWidth < 1600 && viewportWidth > 768) {
         perPage = 2;
