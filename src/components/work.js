@@ -8,6 +8,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import LoadingButton from './loadingbutton';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 const theme = createTheme({
     palette: {
@@ -70,9 +71,16 @@ export default function Intro() {
         for (let i = 0; i < perPage; i++) { arr.push(
                 
                     <Stack key={indexes[i]} spacing={1} className="loading-works-skeleton">
-                    <Skeleton sx={{ bgcolor: '#333' }} variant="text" />
-                    <Skeleton sx={{ bgcolor: '#333' }} variant="circular" width={40} height={40} />
-                    <Skeleton sx={{ bgcolor: '#333' }} variant="rectangular" width={210} height={118} />
+                        <Typography variant="h1"><Skeleton sx={{ bgcolor: '#333' }} variant="text" /></Typography>
+                        <Typography variant="p"><Skeleton sx={{ bgcolor: '#333' }} variant="text" />
+                        <Skeleton sx={{ bgcolor: '#333' }} variant="text" />
+                        <Skeleton sx={{ bgcolor: '#333' }} variant="text" /></Typography>
+                        <Stack style={{display: "block"}} spacing={2} className="loading-works-skeleton-topics">
+                            <Skeleton sx={{ bgcolor: '#333' }} variant="text" width="15%" style={{display: "inline-block", marginRight: "25px"}} />
+                            <Skeleton sx={{ bgcolor: '#333' }} variant="text" width={50} style={{display: "inline-block", marginRight: "25px"}} />
+                            <Skeleton sx={{ bgcolor: '#333' }} variant="text" width={50} style={{display: "inline-block", marginRight: "25px"}} />
+                        </Stack>
+                        <Skeleton sx={{ bgcolor: '#333' }} style={{marginTop: '25px'}} variant="rectangular" width={150} height={40} />
                     </Stack>
         ) }
         return arr;
@@ -94,10 +102,8 @@ export default function Intro() {
 
     return (
         <section id="work" className="section-padding">
-
             
                 <div className="works-container">
-                
                     {works?.map((work, i) => {
                         return (
                             <FadeInSection transform={false} key={work.id} delay={`${i}00ms`}>

@@ -18,6 +18,10 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-auto-rows: 1fr;
         gap: 3em;
+
+        .loading-works-skeleton {
+            padding: 1em;
+        }
     
         .github-repository {
             padding: 3em;
