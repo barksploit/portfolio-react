@@ -50,6 +50,7 @@ h1 {
 
 .fade-in-section-no-transform {
     opacity: 0;
+    transition: opacity .6s ease-out;
     visibility: hidden;
 }
 
