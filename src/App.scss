@@ -41,11 +41,17 @@ h1 {
     opacity: 0.1;
 }
 
-.fade-in-section {
+.fade-in-section-with-transform {
     transition: opacity .6s ease-out, transform .6s ease-out;
     opacity: 0;
     transform: translateY(10vh);
     will-change: opacity, transform;
+}
+
+.fade-in-section-no-transform {
+    transition: opacity .6s ease-out;
+    opacity: 0;
+    will-change: opacity;
 }
 
 .is-visible {

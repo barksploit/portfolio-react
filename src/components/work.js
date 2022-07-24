@@ -100,7 +100,7 @@ export default function Intro() {
                 
                     {works?.map((work, i) => {
                         return (
-                            <FadeInSection key={work.id} delay={`${i}00ms`}>
+                            <FadeInSection transform={false} key={work.id} delay={`${i}00ms`}>
                                 <div className="github-repository">
                                     <h2 className='work-title'>{work.full_name}</h2>
                                     <p className='work-description'>{work.description}</p>
