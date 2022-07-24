@@ -68,7 +68,7 @@ export default function About() {
             <div className="about-content-wrapper">
                 <FadeInSection>
                     <p style={{ lineHeight: "2em" }}>I am an avid, aspiring Web and Software Developer based in the South West of England. I specialise in Full-Stack Web Development.
-                        I recently graduated with a First-Class Honours BSc degree in Applied Computing from UWE Bristol and intend on going back to University to understake a Masters
+                        I recently graduated with a First-Class Honours BSc degree in Applied Computing from UWE Bristol and intend on going back to University to undertake a Masters
                         degree in Cyber Security.</p>
 
                     <p>Here are some things I've worked with:</p>
