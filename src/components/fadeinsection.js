@@ -17,7 +17,7 @@ export default function FadeInSection(props) {
     }, []);
     return (
         <div
-            className={`${props.transform == undefined ? "fade-in-section-with-transform" : "fade-in-section-no-transform"} ${isVisible ? "is-visible" : ""} ${props.className}`}
+            className={`${props.transform === undefined ? "fade-in-section-with-transform" : "fade-in-section-no-transform"} ${isVisible ? "is-visible" : ""} ${props.className}`}
             style={{ transitionDelay: `${props.delay}` }}
             ref={domRef}
         >
