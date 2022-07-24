@@ -6,6 +6,8 @@ import FadeInSection from './fadeinsection';
 import { useEffect, useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import LoadingButton from './loadingbutton';
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
 
 const theme = createTheme({
     palette: {
@@ -28,33 +30,52 @@ export default function Intro() {
     });
     const [worksPage, setWorksPage] = useState(1);
 
+    let perPage = 1;
+
+    const viewportWidth = window.innerWidth;
+
+    if (viewportWidth > 1600 || viewportWidth < 768) {
+        perPage = 3;
+    } else if (viewportWidth < 1600 && viewportWidth > 768) {
+        perPage = 2;
+    }
+
     const fetchWorks = async (buttonClick) => {
-        const viewportWidth = window.innerWidth;
-        let perPage = 1;
         
-        if (viewportWidth > 1600 || viewportWidth < 768) {
-            perPage = 3;
-        } else if (viewportWidth < 1600 && viewportWidth > 768) {
-            perPage = 2;
-        }
         axios.get("https://grfn.sh/work/?page=" + worksPage + "&perpage=" + perPage).then((response) => {
-            for (const i in response.data) {
-                setWorks(previousWorks => [...previousWorks, response.data[i]]);
-            }
-            setWorksPage(worksPage + 1);
-            
             setTimeout(() => {
+                for (const i in response.data) {
+                    setWorks(previousWorks => [...previousWorks, response.data[i]]);
+                }
+                setWorksPage(worksPage + 1);
+            
+            
                 setLoading({ finished: true });
-                if (buttonClick) Array.from(document.querySelectorAll('.github-repository')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
                 setTimeout(() => {
+                    if (buttonClick) Array.from(document.querySelectorAll('.works-container .github-repository')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
                     setLoading({
                         loading: false,
                         finished: false
                     });
                     
-                }, 1500);
+                }, 500);
             }, 500);
+            
         });
+    }
+
+    const showLoadingSkeleton = () => {
+        let arr = [];
+        let indexes = ["firstskeleton", "secondskeleton", "thirdskeleton"]
+        for (let i = 0; i < perPage; i++) { arr.push(
+                
+                    <Stack key={indexes[i]} spacing={1} className="loading-works-skeleton">
+                    <Skeleton sx={{ bgcolor: '#333' }} variant="text" />
+                    <Skeleton sx={{ bgcolor: '#333' }} variant="circular" width={40} height={40} />
+                    <Skeleton sx={{ bgcolor: '#333' }} variant="rectangular" width={210} height={118} />
+                    </Stack>
+        ) }
+        return arr;
     }
 
     const getAllRepos = (buttonClick) => {
@@ -74,8 +95,9 @@ export default function Intro() {
     return (
         <section id="work" className="section-padding">
 
-            <FadeInSection>
+            
                 <div className="works-container">
+                
                     {works?.map((work, i) => {
                         return (
                             <FadeInSection key={work.id} delay={`${i}00ms`}>
@@ -94,8 +116,9 @@ export default function Intro() {
                             </FadeInSection>
                         );
                     })}
+                    {loadingButton.loading ? showLoadingSkeleton().map(skeleton => skeleton) : undefined}
                 </div>
-
+            <FadeInSection> 
                 <div className="load-more-container">
                     <ThemeProvider theme={theme}>
                         <LoadingButton onClick={() => getAllRepos(true)} loading={loadingButton.loading ? 1 : 0} done={loadingButton.finished ? 1 : 0} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
