@@ -44,6 +44,7 @@ export default function Intro() {
     const fetchWorks = async (buttonClick) => {
         
         axios.get("https://grfn.sh/work/?page=" + worksPage + "&perpage=" + perPage).then((response) => {
+            if (buttonClick) Array.from(document.querySelectorAll('.loading-works-skeleton')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
             setTimeout(() => {
                 for (const i in response.data) {
                     setWorks(previousWorks => [...previousWorks, response.data[i]]);
@@ -53,7 +54,7 @@ export default function Intro() {
             
                 setLoading({ finished: true });
                 setTimeout(() => {
-                    if (buttonClick) Array.from(document.querySelectorAll('.works-container .github-repository')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
+                    
                     setLoading({
                         loading: false,
                         finished: false
