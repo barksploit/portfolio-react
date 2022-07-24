@@ -113,7 +113,7 @@ export default function Intro() {
                                 <p className='work-description'>{work.description}</p>
                                 {work.topics.map((topic, e) => {
                                     return (
-                                        <a key={e} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
+                                        <a key={topic} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
                                     )
                                 })}
                                 <ThemeProvider theme={theme}>
