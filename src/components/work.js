@@ -42,7 +42,7 @@ export default function Intro() {
     }
 
     const fetchWorks = async (buttonClick) => {
-        
+
         axios.get("https://grfn.sh/work/?page=" + worksPage + "&perpage=" + perPage).then((response) => {
             if (buttonClick) Array.from(document.querySelectorAll('.loading-works-skeleton')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
             setTimeout(() => {
@@ -50,41 +50,43 @@ export default function Intro() {
                     setWorks(previousWorks => [...previousWorks, response.data[i]]);
                 }
                 setWorksPage(worksPage + 1);
-            
-            
+
+
                 setLoading({ finished: true });
-                
+
                 setTimeout(() => {
                     if (buttonClick) Array.from(document.querySelectorAll('.github-repository')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
                     setLoading({
                         loading: false,
                         finished: false
                     });
-                    
+
                 }, 500);
             }, 500);
-            
+
         });
     }
 
     const showLoadingSkeleton = () => {
         let arr = [];
         let indexes = ["firstskeleton", "secondskeleton", "thirdskeleton"]
-        for (let i = 0; i < perPage; i++) { arr.push(
-                
-                    <Stack key={indexes[i]} spacing={1} className="loading-works-skeleton">
-                        <Typography variant="h1"><Skeleton sx={{ bgcolor: '#333' }} variant="text" /></Typography>
-                        <Typography variant="p"><Skeleton sx={{ bgcolor: '#333' }} variant="text" />
+        for (let i = 0; i < perPage; i++) {
+            arr.push(
+
+                <Stack key={indexes[i]} spacing={1} className="loading-works-skeleton">
+                    <Typography variant="h1"><Skeleton sx={{ bgcolor: '#333' }} variant="text" /></Typography>
+                    <Typography variant="p"><Skeleton sx={{ bgcolor: '#333' }} variant="text" />
                         <Skeleton sx={{ bgcolor: '#333' }} variant="text" />
                         <Skeleton sx={{ bgcolor: '#333' }} variant="text" /></Typography>
-                        <Stack style={{display: "block"}} spacing={2} className="loading-works-skeleton-topics">
-                            <Skeleton sx={{ bgcolor: '#333' }} variant="text" width="15%" style={{display: "inline-block", marginRight: "25px"}} />
-                            <Skeleton sx={{ bgcolor: '#333' }} variant="text" width={50} style={{display: "inline-block", marginRight: "25px"}} />
-                            <Skeleton sx={{ bgcolor: '#333' }} variant="text" width={50} style={{display: "inline-block", marginRight: "25px"}} />
-                        </Stack>
-                        <Skeleton sx={{ bgcolor: '#333' }} style={{marginTop: '25px'}} variant="rectangular" width={150} height={40} />
+                    <Stack style={{ display: "block" }} spacing={2} className="loading-works-skeleton-topics">
+                        <Skeleton sx={{ bgcolor: '#333' }} variant="text" width="15%" style={{ display: "inline-block", marginRight: "25px" }} />
+                        <Skeleton sx={{ bgcolor: '#333' }} variant="text" width={50} style={{ display: "inline-block", marginRight: "25px" }} />
+                        <Skeleton sx={{ bgcolor: '#333' }} variant="text" width={50} style={{ display: "inline-block", marginRight: "25px" }} />
                     </Stack>
-        ) }
+                    <Skeleton sx={{ bgcolor: '#333' }} style={{ marginTop: '25px' }} variant="rectangular" width={150} height={40} />
+                </Stack>
+            )
+        }
         return arr;
     }
 
@@ -104,36 +106,34 @@ export default function Intro() {
 
     return (
         <section id="work" className="section-padding">
-            
-                <div className="works-container">
-                    {works?.map((work, i) => {
-                        return (
-                            <FadeInSection transform={false} key={work.id} delay={`${i}00ms`}>
-                                <div className="github-repository">
-                                    <h2 className='work-title'>{work.full_name}</h2>
-                                    <p className='work-description'>{work.description}</p>
-                                    {work.topics.map((topic, e) => {
-                                        return (
-                                            <a key={e} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
-                                        )
-                                    })}
-                                    <ThemeProvider theme={theme}>
-                                        <Button className="view-repository" onClick={() => window.location = `${work.html_url}`} variant="outlined">view repository</Button>
-                                    </ThemeProvider>
-                                </div>
-                            </FadeInSection>
-                        );
-                    })}
-                    {loadingButton.loading ? showLoadingSkeleton().map(skeleton => skeleton) : undefined}
-                </div>
-            <FadeInSection> 
-                <div className="load-more-container">
+
+            <div className="works-container">
+                {works?.map((work, i) => {
+                    return (
+                        <FadeInSection transform={false} key={work.id} delay={`${i}00ms`}>
+                            <div className="github-repository">
+                                <h2 className='work-title'>{work.full_name}</h2>
+                                <p className='work-description'>{work.description}</p>
+                                {work.topics.map((topic, e) => {
+                                    return (
+                                        <a key={e} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
+                                    )
+                                })}
+                                <ThemeProvider theme={theme}>
+                                    <Button className="view-repository" onClick={() => window.location = `${work.html_url}`} variant="outlined">view repository</Button>
+                                </ThemeProvider>
+                            </div>
+                        </FadeInSection>
+                    );
+                })}
+                {loadingButton.loading ? showLoadingSkeleton().map(skeleton => skeleton) : undefined}
+                <FadeInSection className="load-more-container">
                     <ThemeProvider theme={theme}>
                         <LoadingButton onClick={() => getAllRepos(true)} loading={loadingButton.loading ? 1 : 0} done={loadingButton.finished ? 1 : 0} className="load-more" variant="outlined" color="secondary">Load More</LoadingButton>
                     </ThemeProvider>
-                </div>
-            </FadeInSection>
+                </FadeInSection>
+            </div>
 
-        </section>
+        </section >
     );
 }
