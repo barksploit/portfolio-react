@@ -46,7 +46,7 @@
             &:hover {
                 background-position: 100% 100%;
 
-                transform: translateY(1em);
+                transform: scale(1.1);
 
                 .view-repository {
                     visibility: visible;
@@ -65,11 +65,12 @@
 
             .work-title {
                 font-size: 2em;
-                margin: 0 0 2em 0;
+                margin: 0 0 1em 0;
             }
 
             .work-description {
                 font-size: 1em;
+                margin-bottom: 2em;
             }
 
             .work-topic {
