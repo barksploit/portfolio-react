@@ -12,7 +12,7 @@ export default function Credits() {
                         {/* eslint-disable-next-line */}
                         <p>/*</p>
                         <br />
-                        <p>Made with -</p>
+                        <p>Made with</p>
                         <br />
                         <p>ReactJS</p>
                         <p>Axios</p>
