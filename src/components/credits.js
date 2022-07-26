@@ -12,9 +12,9 @@ export default function Credits() {
                         {/* eslint-disable-next-line */}
                         <p>/*</p>
                         <br />
-                        <p>Made with</p>
+                        <p>Made with -</p>
                         <br />
-                        <p>React</p>
+                        <p>ReactJS</p>
                         <p>Axios</p>
                         <p>Material UI</p>
                         <p>GSAP</p>
@@ -23,7 +23,7 @@ export default function Credits() {
                         <p>PHP</p>
                         <p>GitHub REST API</p>
                         <br />
-                        <p>This is a work in progress so check back often!</p>
+                        <p>This is a work in progress so check back often! ❤</p>
                         <br />
                         <p>*/</p>
 
