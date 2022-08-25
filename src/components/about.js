@@ -30,7 +30,7 @@ export default function About() {
             avatarsrc: "https://seeklogo.com/images/L/laravel-logo-9B01588B1F-seeklogo.com.png",
         },
         {
-            label: "Javascript ES6+",
+            label: "JavaScript ES6+",
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
         },
         {
@@ -42,16 +42,16 @@ export default function About() {
             avatarsrc: "https://reactjs.org/logo-og.png",
         },
         {
-            label: "MySQL",
-            avatarsrc: "https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg",
-        },
-        {
-            label: "HTML5 & CSS3",
-            avatarsrc: "https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png",
+            label: "VueJS",
+            avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png",
         },
         {
             label: "SCSS/SASS",
             avatarsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png",
+        },
+        {
+            label: "MySQL",
+            avatarsrc: "https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg",
         },
         {
             label: "WordPress",
