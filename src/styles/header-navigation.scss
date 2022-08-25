@@ -4,6 +4,7 @@
 
     padding: 4em 8em;
     text-align: right;
+    backdrop-filter: blur(4px);
 
     .active {
         color: #000;
