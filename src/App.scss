@@ -44,12 +44,14 @@ h1 {
 .fade-in-section-with-transform {
     transition: opacity .6s ease-out, transform .6s ease-out;
     opacity: 0;
+    will-change: transform, opacity;
     visibility: hidden;
     transform: translateY(5vh);
 }
 
 .fade-in-section-no-transform {
     opacity: 0;
+    will-change: opacity;
     transition: opacity .6s ease-out;
     visibility: hidden;
 }
