@@ -98,7 +98,6 @@ export default function Intro() {
 
         getAllRepos(false);
 
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
