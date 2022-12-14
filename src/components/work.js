@@ -43,7 +43,7 @@ export default function Intro() {
 
     const fetchWorks = async (buttonClick) => {
 
-        axios.get("https://grfn.sh/work/?page=" + worksPage + "&perpage=" + perPage).then((response) => {
+        axios.get("/work/?page=" + worksPage + "&perpage=" + perPage).then((response) => {
             if (buttonClick) Array.from(document.querySelectorAll('.loading-works-skeleton')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
             setTimeout(() => {
                 for (const i in response.data) {
