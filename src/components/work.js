@@ -110,7 +110,7 @@ export default function Intro() {
                             <div className="github-repository">
                                 <h2 className='work-title'>{work.full_name}</h2>
                                 <p className='work-description'>{work.description}</p>
-                                {work.topics.map((topic, e) => {
+                                {work && work.topics?.map((topic, e) => {
                                     return (
                                         <a key={topic} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
                                     )
