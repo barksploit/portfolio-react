@@ -1,9 +1,9 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+//require_once __DIR__ . '/../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
-$dotenv->load();
+//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+//$dotenv->load();
 
 $page = 1;
 $perpage = 3;
@@ -23,12 +23,12 @@ curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/barksploit/repos?sor
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 // Configure Basic Authentication for GitHub REST API
-curl_setopt($ch, CURLOPT_USERPWD, $_ENV['GITHUB_API_USERNAME'] . ":" . $_ENV["GITHUB_API_TOKEN"]);
+curl_setopt($ch, CURLOPT_USERPWD, getenv('GITHUB_API_USERNAME') . ":" . getenv("GITHUB_API_TOKEN"));
 
 // Define HTTP request headers
 $headers = [
     'Accept: application/vnd.github+json',
-    'User-Agent: ' . $_ENV['GITHUB_API_USERNAME']
+    'User-Agent: ' . getenv('GITHUB_API_USERNAME')
 ];
 
 // Assign $headers to the CURL request

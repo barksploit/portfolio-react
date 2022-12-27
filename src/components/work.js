@@ -43,7 +43,7 @@ export default function Intro() {
 
     const fetchWorks = async (buttonClick) => {
 
-        axios.get("https://grfn.sh/work/?page=" + worksPage + "&perpage=" + perPage).then((response) => {
+        axios.get("/work/?page=" + worksPage + "&perpage=" + perPage).then((response) => {
             if (buttonClick) Array.from(document.querySelectorAll('.loading-works-skeleton')).pop().scrollIntoView({ behavior: "smooth", block: "center" });
             setTimeout(() => {
                 for (const i in response.data) {
@@ -98,7 +98,6 @@ export default function Intro() {
 
         getAllRepos(false);
 
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
@@ -111,7 +110,7 @@ export default function Intro() {
                             <div className="github-repository">
                                 <h2 className='work-title'>{work.full_name}</h2>
                                 <p className='work-description'>{work.description}</p>
-                                {work.topics.map((topic, e) => {
+                                {work && work.topics?.map((topic, e) => {
                                     return (
                                         <a key={topic} href={`https://github.com/topics/${topic}`} target="_blank" rel="noreferrer"><span className="work-topic">{topic}</span></a>
                                     )
